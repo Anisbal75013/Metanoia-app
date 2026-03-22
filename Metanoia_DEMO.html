@@ -7,7 +7,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes"/>
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
 <meta name="apple-mobile-web-app-title" content="Metanoia"/>
-<meta name="theme-color" content="#0B0E14"/>
+<meta name="theme-color" content="#0d1117"/>
 <link rel="apple-touch-icon" href="https://via.placeholder.com/192/AA00FF/FFFFFF?text=M"/>
 <title>Metanoia — MODE DÉMO · Bio-Optimisation Oncologique</title>
 <script src="https://cdn.tailwindcss.com"></script>
@@ -21,23 +21,23 @@ tailwind.config = {
   theme: {
     extend: {
       colors: {
-        "surface": "#10131a",
-        "surface-container-high": "#272a31",
-        "surface-container": "#1d2026",
-        "surface-container-low": "#191c22",
+        "surface": "#0d1117",
+        "surface-container-high": "#30363d",
+        "surface-container": "#21262d",
+        "surface-container-low": "#161b22",
         "surface-container-lowest": "#0b0e14",
         "surface-container-highest": "#32353c",
         "surface-bright": "#363940",
-        "surface-dim": "#10131a",
+        "surface-dim": "#0d1117",
         "on-surface": "#e1e2eb",
         "on-surface-variant": "#cbc4d0",
-        "primary": "#d3bcfc",
-        "secondary": "#efb1f9",
+        "primary": "#b57bee",
+        "secondary": "#c77dff",
         "outline": "#948e99",
         "outline-variant": "#49454f",
         "on-primary": "#38265b",
         "on-background": "#e1e2eb",
-        "background": "#10131a",
+        "background": "#0d1117",
       },
       fontFamily: {
         "headline": ["Manrope", "sans-serif"],
@@ -75,7 +75,7 @@ tailwind.config = {
 ::-webkit-scrollbar-thumb:hover{background:rgba(255,255,255,0.22)}
 
 body{
-  background:#0f1115;
+  background:#0d1117;
   color:#e1e2eb;
   font-family:'Inter',sans-serif;
   min-height:100vh;
@@ -85,7 +85,7 @@ body{
 }
 
 .card{
-  background:#191c22;
+  background:#161b22;
   border-radius:1.25rem;
   overflow:hidden;
 }
@@ -93,7 +93,7 @@ body{
 .app-header{
   position:sticky;
   top:0;
-  background:#0f1115;
+  background:#0d1117;
   padding:1rem;
   z-index:50;
 }
@@ -113,7 +113,7 @@ body{
   background:none;
   border:none;
 }
-.nav-item.active{color:#d3bcfc}
+.nav-item.active{color:#b57bee}
 
 .nav-icon{
   font-size:24px;
@@ -128,7 +128,7 @@ body{
 }
 
 .progress-track{
-  background:#1d2026;
+  background:#21262d;
   border-radius:9999px;
   height:6px;
   overflow:hidden;
@@ -141,7 +141,7 @@ body{
 }
 
 .gauge-track{
-  background:#1d2026;
+  background:#21262d;
   border-radius:9999px;
   height:6px;
   overflow:hidden;
@@ -162,7 +162,7 @@ body{
   font-weight:600;
   cursor:pointer;
   border:1.5px solid rgba(255,255,255,0.08);
-  background:#1d2026;
+  background:#21262d;
   color:#cbc4d0;
   transition:border-color 0.2s, color 0.2s;
 }
@@ -180,7 +180,7 @@ body{
   font-weight:600;
   cursor:pointer;
   border:1.5px solid rgba(255,255,255,0.08);
-  background:#1d2026;
+  background:#21262d;
   color:#cbc4d0;
   transition:border-color 0.2s, color 0.2s;
 }
@@ -191,7 +191,7 @@ body{
 
 .auth-input{
   width:100%;
-  background:#191c22;
+  background:#161b22;
   border:1px solid rgba(255,255,255,0.1);
   border-radius:0.875rem;
   padding:0.875rem 1rem;
@@ -209,9 +209,9 @@ body{
   width:100%;
   padding:0.875rem;
   border-radius:9999px;
-  background:linear-gradient(135deg,#d3bcfc,#efb1f9);
+  background:linear-gradient(135deg,#b57bee,#c77dff);
   border:none;
-  color:#230f45;
+  color:#1a0a33;
   font-family:'Manrope',sans-serif;
   font-weight:800;
   font-size:15px;
@@ -285,7 +285,7 @@ body{
   font-family:'Manrope',sans-serif;
   font-weight:800;
   font-size:14px;
-  color:#d3bcfc;
+  color:#b57bee;
   margin-bottom:0.5rem;
 }
 
@@ -293,7 +293,7 @@ body{
   width:8px;
   height:8px;
   border-radius:9999px;
-  background:#d3bcfc;
+  background:#b57bee;
   flex-shrink:0;
   margin-top:4px;
 }
@@ -308,7 +308,7 @@ body{
 .toggle-slider{
   position:absolute;
   inset:0;
-  background:#2d3140;
+  background:#30363d;
   border-radius:9999px;
   transition:background 0.3s;
 }
@@ -317,14 +317,14 @@ body{
   display:flex;
   align-items:center;
   gap:0.5rem;
-  background:#191c22;
+  background:#161b22;
   border-radius:0.875rem;
   padding:0.625rem 0.875rem;
   border:1px solid rgba(255,255,255,0.06);
 }
 
 .disc-panel{
-  background:#1d2026;
+  background:#21262d;
   border-radius:1.5rem 1.5rem 0 0;
   padding:1.75rem 1.5rem;
 }
@@ -341,7 +341,7 @@ body{
 
 .tenenbaum{
   background:rgba(170,0,255,0.12);
-  color:#c084fc;
+  color:#9b59b6;
   border-radius:9999px;
   padding:1px 6px;
   font-size:9px;
@@ -361,7 +361,7 @@ body{
   border:1px solid rgba(211,188,252,0.15);
   border-radius:9999px;
   font-size:11px;
-  color:#d3bcfc;
+  color:#b57bee;
   font-family:'Inter',sans-serif;
 }
 
@@ -406,7 +406,7 @@ body{
 /* Disclaimer panel */
 .disc-panel {
   width: 100%; max-width: 480px;
-  background: #1d2026;
+  background: #21262d;
   border-radius: 1.75rem 1.75rem 0 0;
   padding: 1.75rem 1.5rem calc(1.75rem + env(safe-area-inset-bottom, 16px));
   animation: slideUp 0.32s ease;
@@ -425,7 +425,7 @@ body{
 #upgradeModal.open { display: flex; }
 .upgrade-panel {
   width: 100%; max-width: 480px;
-  background: #1d2026;
+  background: #21262d;
   border-radius: 2rem 2rem 0 0;
   padding: 1.75rem 1.5rem calc(1.75rem + env(safe-area-inset-bottom, 16px));
   animation: slideUp 0.3s ease;
@@ -457,7 +457,7 @@ body{
 /* Auth screen */
 #auth-screen {
   position: fixed; inset: 0; z-index: 700;
-  background: #0f1115;
+  background: #0d1117;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -481,8 +481,124 @@ body{
 
 /* == END NAV STICKY == */
 
+
+/* === v4.5 MÉDICAL-TECH REFINEMENTS === */
+
+/* Scrollbar thin clinical */
+::-webkit-scrollbar        { width: 4px; height: 4px; }
+::-webkit-scrollbar-track  { background: transparent; }
+::-webkit-scrollbar-thumb  { background: #30363d; border-radius: 9999px; }
+::-webkit-scrollbar-thumb:hover { background: #9b59b6; }
+
+/* Card border precision */
+.card {
+  border: 1px solid rgba(48,54,61,0.6) !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+}
+
+/* Victory badge */
+#victory-badge {
+  display: flex; align-items: flex-start; gap: 0.75rem;
+  background: rgba(155,89,182,0.08);
+  border: 1px solid rgba(155,89,182,0.2);
+  border-radius: 1.25rem; padding: 0.875rem 1rem;
+  margin-bottom: 1rem;
+}
+
+/* GKI gauge — minimal clinical */
+.gauge-track {
+  height: 8px;
+  background: #21262d;
+  border-radius: 9999px;
+  overflow: hidden;
+  border: 1px solid rgba(48,54,61,0.5);
+}
+.gauge-fill {
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 0.6s cubic-bezier(0.4,0,0.2,1), background 0.4s;
+}
+
+/* Protocol pills — Seyfried / Tenenbaum */
+.seyfried   { background: rgba(52,211,153,0.12); color: #34d399;  border-radius:9999px; padding:1px 7px; font-size:9px; font-family:Inter; font-weight:600; letter-spacing:0.03em; }
+.tenenbaum  { background: rgba(155,89,182,0.15); color: #b57bee;  border-radius:9999px; padding:1px 7px; font-size:9px; font-family:Inter; font-weight:600; letter-spacing:0.03em; }
+
+/* Nav items */
+.nav-item       { color: #6e7681; }
+.nav-item.active { color: #9b59b6; }
+
+/* Auth button gradient */
+.auth-btn {
+  background: linear-gradient(135deg, #9b59b6, #7b2d8b) !important;
+  color: #f0e6ff !important;
+}
+
+/* Disclaimer dark theme */
+.disc-panel {
+  background: #161b22 !important;
+  border-top: 2px solid rgba(155,89,182,0.4);
+}
+
+/* Upgrade panel */
+.upgrade-panel {
+  background: #161b22 !important;
+  border-top: 2px solid rgba(155,89,182,0.4);
+}
+
+/* Filter pills  */
+.filter-pill, .pack-pill {
+  background: #21262d;
+  border-color: rgba(48,54,61,0.7);
+  color: #8b949e;
+}
+.filter-pill:hover, .pack-pill:hover {
+  border-color: rgba(155,89,182,0.4);
+  color: #b57bee;
+}
+
+/* Proto pills */
+.proto-pill { background: #21262d; }
+.proto-pill.active { background: rgba(155,89,182,0.15); color: #b57bee; border-color: rgba(155,89,182,0.5); }
+
+/* Marker input */
+.marker-input { color: #e1e2eb; }
+
+/* Section titles */
+.lifestyle-section-title { color: #b57bee !important; }
+
+/* food scanner */
+.food-scanner-compact {
+  background: #161b22 !important;
+  border-color: rgba(48,54,61,0.6) !important;
+}
+
+/* Expert badge */
+.expert-badge {
+  background: rgba(155,89,182,0.08) !important;
+  border-color: rgba(155,89,182,0.2) !important;
+  color: #b57bee !important;
+}
+
+/* Pack glow cards — violet theme */
+.pack-glow-card {
+  border-color: rgba(155,89,182,0.25) !important;
+  box-shadow: 0 0 15px rgba(155,89,182,0.12) !important;
+}
+
+/* Molecule details scroll */
+.molecule-details[data-open="1"] {
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+/* responsive: no horizontal scroll */
+html, body { overflow-x: hidden; max-width: 100vw; }
+.view { padding-left: max(1rem, env(safe-area-inset-left)); padding-right: max(1rem, env(safe-area-inset-right)); }
+
+/* === END v4.5 === */
+
 /* == METANOIA FINAL CSS == */
-.food-zone-accordion{border-radius:1rem;overflow:hidden;border:1px solid rgba(255,255,255,.06);background:#191c22;margin-bottom:.625rem;transition:border-color .2s}
+.food-zone-accordion{border-radius:1rem;overflow:hidden;border:1px solid rgba(255,255,255,.06);background:#161b22;margin-bottom:.625rem;transition:border-color .2s}
 .food-zone-accordion[open]{border-color:rgba(255,255,255,.12)}
 .food-zone-accordion>summary{list-style:none;display:flex;align-items:center;gap:.5rem;padding:.75rem 1rem;cursor:pointer;user-select:none;-webkit-user-select:none}
 .food-zone-accordion>summary::-webkit-details-marker{display:none}
@@ -526,7 +642,7 @@ document.addEventListener('keydown', function(e) {
   function check() {
     if (window.outerWidth - window.innerWidth > threshold ||
         window.outerHeight - window.innerHeight > threshold) {
-      document.body.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100vh;background:#0B0E14;color:#d3bcfc;font-family:Manrope;font-size:18px;font-weight:800;text-align:center;padding:2rem;">&#x26A0; Accès non autorisé.<br/><span style=\"font-size:13px;color:#948e99;font-weight:400;margin-top:0.5rem;display:block;\">Rechargez la page pour continuer.</span></div>';
+      document.body.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100vh;background:#0d1117;color:#b57bee;font-family:Manrope;font-size:18px;font-weight:800;text-align:center;padding:2rem;">&#x26A0; Accès non autorisé.<br/><span style=\"font-size:13px;color:#948e99;font-weight:400;margin-top:0.5rem;display:block;\">Rechargez la page pour continuer.</span></div>';
     }
   }
   setInterval(check, 1500);
@@ -538,18 +654,18 @@ document.addEventListener('keydown', function(e) {
   <div class="disc-panel">
     <div style="text-align:center;margin-bottom:1.5rem;">
       <div style="width:56px;height:56px;border-radius:9999px;background:rgba(211,188,252,0.12);border:2px solid rgba(211,188,252,0.3);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;">
-        <span class="material-symbols-outlined" style="color:#d3bcfc;font-size:26px;">info</span>
+        <span class="material-symbols-outlined" style="color:#b57bee;font-size:26px;">info</span>
       </div>
       <div style="font-family:Manrope;font-weight:800;font-size:18px;color:#e1e2eb;">Avertissement Important</div>
       <div style="font-size:12px;color:#948e99;font-family:Inter;margin-top:4px;">Metanoia v4.4 — Usage strictement personnel</div>
     </div>
     <div style="display:flex;flex-direction:column;gap:1rem;margin-bottom:1.5rem;">
       <div style="background:rgba(255,255,255,0.03);border-radius:1rem;padding:1rem;border-left:3px solid rgba(211,188,252,0.5);">
-        <div style="font-size:11px;color:#d3bcfc;font-weight:700;font-family:Inter;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px;">1. Usage Documentaire Uniquement</div>
+        <div style="font-size:11px;color:#b57bee;font-weight:700;font-family:Inter;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px;">1. Usage Documentaire Uniquement</div>
         <div style="font-size:13px;color:#cbc4d0;font-family:Inter;line-height:1.6;">Cette application est un outil de documentation personnelle. Elle ne se substitue en aucun cas à un avis médical, un diagnostic ou une prescription.</div>
       </div>
       <div style="background:rgba(255,255,255,0.03);border-radius:1rem;padding:1rem;border-left:3px solid rgba(239,177,249,0.5);">
-        <div style="font-size:11px;color:#efb1f9;font-weight:700;font-family:Inter;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px;">2. Consultation Médicale Obligatoire</div>
+        <div style="font-size:11px;color:#c77dff;font-weight:700;font-family:Inter;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px;">2. Consultation Médicale Obligatoire</div>
         <div style="font-size:13px;color:#cbc4d0;font-family:Inter;line-height:1.6;">Tout protocole de supplémentation ou traitement doit être validé et supervisé par un professionnel de santé qualifié.</div>
       </div>
       <div style="background:rgba(255,255,255,0.03);border-radius:1rem;padding:1rem;border-left:3px solid rgba(52,211,153,0.5);">
@@ -561,11 +677,11 @@ document.addEventListener('keydown', function(e) {
         <div style="font-size:13px;color:#cbc4d0;font-family:Inter;line-height:1.6;">L&apos;utilisateur assume l&apos;entière responsabilité de l&apos;usage des informations présentées. Metanoia décline toute responsabilité en cas d&apos;utilisation inappropriée.</div>
       </div>
     </div>
-    <button onclick="acceptDisclaimer()" style="width:100%;padding:1rem;border-radius:9999px;background:linear-gradient(135deg,#d3bcfc,#efb1f9);border:none;cursor:pointer;font-family:Manrope;font-weight:800;font-size:15px;color:#230f45;letter-spacing:0.02em;box-shadow:0 0 24px rgba(211,188,252,0.3);">
+    <button onclick="acceptDisclaimer()" style="width:100%;padding:1rem;border-radius:9999px;background:linear-gradient(135deg,#b57bee,#c77dff);border:none;cursor:pointer;font-family:Manrope;font-weight:800;font-size:15px;color:#1a0a33;letter-spacing:0.02em;box-shadow:0 0 24px rgba(211,188,252,0.3);">
       J&apos;ai lu et j&apos;accepte
     </button>
     <div style="text-align:center;margin-top:1rem;">
-      <div style="font-family:Manrope;font-weight:800;font-size:12px;color:#d3bcfc;">Metanoia</div>
+      <div style="font-family:Manrope;font-weight:800;font-size:12px;color:#b57bee;">Metanoia</div>
       <div style="font-family:Inter;font-size:10px;color:#49454f;margin-top:2px;font-style:italic;">Metanoia (Gr.) : Transformation de l&apos;esprit, changement de regard.</div>
     </div>
   </div>
@@ -580,10 +696,10 @@ document.addEventListener('keydown', function(e) {
     </div>
     <div id="upgrade-plan-info" style="margin-bottom:1.25rem;"></div>
     <div style="display:flex;flex-direction:column;gap:0.75rem;">
-      <button onclick="redirectToCheckout('standard')" style="width:100%;padding:0.875rem;border-radius:9999px;background:linear-gradient(135deg,#d3bcfc,#efb1f9);border:none;cursor:pointer;font-family:Manrope;font-weight:800;font-size:14px;color:#230f45;">
+      <button onclick="redirectToCheckout('standard')" style="width:100%;padding:0.875rem;border-radius:9999px;background:linear-gradient(135deg,#b57bee,#c77dff);border:none;cursor:pointer;font-family:Manrope;font-weight:800;font-size:14px;color:#1a0a33;">
         Standard — 4,99€/mois
       </button>
-      <button onclick="redirectToCheckout('soutien')" style="width:100%;padding:0.875rem;border-radius:9999px;background:linear-gradient(135deg,#AA00FF,#d3bcfc);border:none;cursor:pointer;font-family:Manrope;font-weight:800;font-size:14px;color:#fff;">
+      <button onclick="redirectToCheckout('soutien')" style="width:100%;padding:0.875rem;border-radius:9999px;background:linear-gradient(135deg,#7b2d8b,#b57bee);border:none;cursor:pointer;font-family:Manrope;font-weight:800;font-size:14px;color:#fff;">
         Soutien — 9,99€/mois
       </button>
     </div>
@@ -594,8 +710,8 @@ document.addEventListener('keydown', function(e) {
 <!-- =================== AUTH SCREEN =================== -->
 <div id="auth-screen">
   <div style="text-align:center;margin-bottom:2.5rem;">
-    <div style="width:72px;height:72px;border-radius:9999px;background:linear-gradient(135deg,#d3bcfc,#efb1f9);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 0 40px rgba(211,188,252,0.25);">
-      <span style="font-size:30px;font-weight:800;color:#230f45;font-family:Manrope;">M</span>
+    <div style="width:72px;height:72px;border-radius:9999px;background:linear-gradient(135deg,#b57bee,#c77dff);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 0 40px rgba(211,188,252,0.25);">
+      <span style="font-size:30px;font-weight:800;color:#1a0a33;font-family:Manrope;">M</span>
     </div>
     <div style="font-family:Manrope;font-weight:800;font-size:28px;color:#e1e2eb;letter-spacing:-0.02em;">Metanoia</div>
     <div style="font-size:13px;color:#948e99;font-family:Inter;margin-top:4px;">Bio-Optimisation · Soutien Métabolique</div>
@@ -625,7 +741,7 @@ document.addEventListener('keydown', function(e) {
   <div id="recipe-modal-panel">
     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.25rem;">
       <div id="modal-title" style="font-family:Manrope;font-weight:800;font-size:18px;color:#e1e2eb;"></div>
-      <button onclick="closeRecipeModal()" style="width:36px;height:36px;border-radius:9999px;background:#272a31;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;">
+      <button onclick="closeRecipeModal()" style="width:36px;height:36px;border-radius:9999px;background:#30363d;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;">
         <span class="material-symbols-outlined" style="color:#948e99;font-size:20px;">close</span>
       </button>
     </div>
@@ -640,8 +756,8 @@ const DB = (function(b64){var bin=atob(b64);var bytes=new Uint8Array(bin.length)
 
 <!-- =================== HEADER =================== -->
 <header class="app-header">
-  <div style="width:40px;height:40px;border-radius:9999px;background:linear-gradient(135deg,#d3bcfc,#efb1f9);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-    <span style="font-size:16px;font-weight:800;color:#230f45;font-family:Manrope;">M</span>
+  <div style="width:40px;height:40px;border-radius:9999px;background:linear-gradient(135deg,#b57bee,#c77dff);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+    <span style="font-size:16px;font-weight:800;color:#1a0a33;font-family:Manrope;">M</span>
   </div>
   <div style="flex:1;text-align:center;">
     <span class="text-metabolic" style="font-family:Manrope;font-weight:800;font-size:20px;letter-spacing:-0.02em;">Metanoia</span>
@@ -663,9 +779,9 @@ const DB = (function(b64){var bin=atob(b64);var bytes=new Uint8Array(bin.length)
 
   <!-- ── Badge de Victoire ── -->
   <div id="victory-badge">
-    <span class="material-symbols-outlined" style="color:#c084fc;font-size:30px;flex-shrink:0;">emoji_events</span>
+    <span class="material-symbols-outlined" style="color:#9b59b6;font-size:30px;flex-shrink:0;">emoji_events</span>
     <div>
-      <div style="font-family:Manrope;font-weight:800;font-size:14px;color:#c084fc;margin-bottom:3px;">Zone Thérapeutique Maintenue 🏆</div>
+      <div style="font-family:Manrope;font-weight:800;font-size:14px;color:#9b59b6;margin-bottom:3px;">Zone Thérapeutique Maintenue 🏆</div>
       <div style="font-size:12px;color:#cbc4d0;font-family:Inter;line-height:1.5;">GKI &lt; 1.0 sur vos 3 dernières mesures · Protocole Seyfried actif</div>
     </div>
   </div>
@@ -681,18 +797,18 @@ const DB = (function(b64){var bin=atob(b64);var bytes=new Uint8Array(bin.length)
 
     <!-- Inputs row -->
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-bottom:1.25rem;">
-      <div style="background:#272a31;border-radius:1rem;padding:0.875rem;">
+      <div style="background:#30363d;border-radius:1rem;padding:0.875rem;">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem;">
           <span style="font-size:11px;color:#cbc4d0;font-family:Inter;text-transform:uppercase;letter-spacing:0.06em;">Glucose</span>
-          <button id="unit-toggle" onclick="toggleGlucoseUnit()" style="font-size:10px;background:rgba(211,188,252,0.15);color:#d3bcfc;border:none;border-radius:9999px;padding:2px 8px;cursor:pointer;font-family:Inter;">mM</button>
+          <button id="unit-toggle" onclick="toggleGlucoseUnit()" style="font-size:10px;background:rgba(211,188,252,0.15);color:#b57bee;border:none;border-radius:9999px;padding:2px 8px;cursor:pointer;font-family:Inter;">mM</button>
         </div>
         <input id="glucose-input" type="number" step="0.1" value="4.1" min="0" oninput="computeGKI()"
           style="background:transparent;border:none;outline:none;color:#e1e2eb;font-size:22px;font-weight:700;font-family:Manrope;width:100%;"/>
       </div>
-      <div style="background:#272a31;border-radius:1rem;padding:0.875rem;">
+      <div style="background:#30363d;border-radius:1rem;padding:0.875rem;">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem;">
           <span style="font-size:11px;color:#cbc4d0;font-family:Inter;text-transform:uppercase;letter-spacing:0.06em;">Cétones</span>
-          <span style="font-size:10px;background:rgba(239,177,249,0.15);color:#efb1f9;border-radius:9999px;padding:2px 8px;font-family:Inter;">mM</span>
+          <span style="font-size:10px;background:rgba(239,177,249,0.15);color:#c77dff;border-radius:9999px;padding:2px 8px;font-family:Inter;">mM</span>
         </div>
         <input id="ketone-input" type="number" step="0.1" value="5.2" min="0.1" oninput="computeGKI()"
           style="background:transparent;border:none;outline:none;color:#e1e2eb;font-size:22px;font-weight:700;font-family:Manrope;width:100%;"/>
@@ -704,36 +820,36 @@ const DB = (function(b64){var bin=atob(b64);var bytes=new Uint8Array(bin.length)
       <svg width="160" height="160" viewBox="0 0 110 110" style="overflow:visible;">
         <circle class="gauge-track" cx="55" cy="55" r="45"/>
         <circle id="gauge-fill" class="gauge-fill" cx="55" cy="55" r="45"
-          stroke="#AA00FF"
+          stroke="#7b2d8b"
           stroke-dasharray="283"
           stroke-dashoffset="240"/>
       </svg>
       <div style="margin-top:-84px;text-align:center;z-index:1;position:relative;">
-        <div id="gki-value" style="font-family:Manrope;font-weight:800;font-size:36px;color:#AA00FF;line-height:1;">0.8</div>
-        <div id="gki-zone-label" style="font-size:11px;font-family:Inter;color:#cbc4d0;margin-top:4px;letter-spacing:0.04em;text-transform:uppercase;">Zone Guy</div>
+        <div id="gki-value" style="font-family:Manrope;font-weight:800;font-size:36px;color:#7b2d8b;line-height:1;">0.8</div>
+        <div id="gki-zone-label" style="font-size:11px;font-family:Inter;color:#cbc4d0;margin-top:4px;letter-spacing:0.04em;text-transform:uppercase;">Fenêtre Thérapeutique</div>
       </div>
     </div>
 
     <!-- Zone interpretation -->
-    <div id="gki-zone-card" style="background:#1d2026;border-radius:1rem;padding:1rem;border-left:3px solid #AA00FF;">
-      <div id="gki-zone-name" style="font-family:Manrope;font-weight:700;font-size:14px;color:#AA00FF;margin-bottom:4px;">Zone Guy Tenenbaum</div>
+    <div id="gki-zone-card" style="background:#21262d;border-radius:1rem;padding:1rem;border-left:3px solid #7b2d8b;">
+      <div id="gki-zone-name" style="font-family:Manrope;font-weight:700;font-size:14px;color:#7b2d8b;margin-bottom:4px;">Fenêtre Thérapeutique Optimale</div>
       <div id="gki-interpretation" style="font-size:13px;color:#cbc4d0;line-height:1.5;">GKI &lt; 1 : glycémie très basse + cétose profonde. Protocole 72h+.</div>
     </div>
 
     <!-- Sub-cards -->
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-top:0.75rem;">
-      <div style="background:#1d2026;border-radius:1rem;padding:0.875rem;display:flex;align-items:center;gap:0.75rem;">
+      <div style="background:#21262d;border-radius:1rem;padding:0.875rem;display:flex;align-items:center;gap:0.75rem;">
         <div style="width:36px;height:36px;border-radius:0.75rem;background:rgba(211,188,252,0.12);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-          <span class="material-symbols-outlined" style="color:#d3bcfc;font-size:18px;">water_drop</span>
+          <span class="material-symbols-outlined" style="color:#b57bee;font-size:18px;">water_drop</span>
         </div>
         <div>
           <div style="font-size:10px;color:#cbc4d0;text-transform:uppercase;letter-spacing:0.05em;font-family:Inter;">Glucose</div>
           <div id="glucose-display" style="font-family:Manrope;font-weight:700;font-size:16px;color:#e1e2eb;">4.1 mM</div>
         </div>
       </div>
-      <div style="background:#1d2026;border-radius:1rem;padding:0.875rem;display:flex;align-items:center;gap:0.75rem;">
+      <div style="background:#21262d;border-radius:1rem;padding:0.875rem;display:flex;align-items:center;gap:0.75rem;">
         <div style="width:36px;height:36px;border-radius:0.75rem;background:rgba(239,177,249,0.12);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-          <span class="material-symbols-outlined" style="color:#efb1f9;font-size:18px;">local_fire_department</span>
+          <span class="material-symbols-outlined" style="color:#c77dff;font-size:18px;">local_fire_department</span>
         </div>
         <div>
           <div style="font-size:10px;color:#cbc4d0;text-transform:uppercase;letter-spacing:0.05em;font-family:Inter;">Cétones</div>
@@ -762,7 +878,7 @@ const DB = (function(b64){var bin=atob(b64);var bytes=new Uint8Array(bin.length)
     </div>
 
     <!-- Palier info -->
-    <div id="palier-info" style="background:#1d2026;border-radius:1rem;padding:1rem;">
+    <div id="palier-info" style="background:#21262d;border-radius:1rem;padding:1rem;">
       <div id="palier-etat" style="font-size:13px;color:#cbc4d0;line-height:1.6;margin-bottom:0.75rem;"></div>
       <div style="font-size:11px;color:#cbc4d0;text-transform:uppercase;letter-spacing:0.06em;font-family:Inter;margin-bottom:0.5rem;">Suppléments recommandés</div>
       <div id="palier-supplements" style="display:flex;flex-wrap:wrap;gap:0.5rem;"></div>
@@ -774,6 +890,27 @@ const DB = (function(b64){var bin=atob(b64);var bytes=new Uint8Array(bin.length)
     <div style="font-family:Manrope;font-weight:800;font-size:18px;color:#e1e2eb;margin-bottom:0.75rem;">Cibles Métaboliques</div>
     <div id="cibles-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;"></div>
   </div>
+
+  <!-- ─────── Footer Scientifique Dashboard ─────── -->
+  <div style="
+    margin-top:2rem;
+    padding:0.875rem 1rem;
+    border-top:1px solid rgba(48,54,61,0.7);
+    text-align:center;
+  ">
+    <div style="
+      font-family:Inter;
+      font-size:10px;
+      color:#6e7681;
+      line-height:1.6;
+      letter-spacing:0.02em;
+    ">
+      Algorithmes basés sur les recherches en oncologie métabolique<br/>
+      <span style="color:#9b59b6;font-weight:600;">Seyfried · Tenenbaum · Schwartz</span>
+      &nbsp;·&nbsp; Usage strictement personnel &amp; documentaire
+    </div>
+  </div>
+
 
 </div><!-- end dashboard -->
 
@@ -788,7 +925,7 @@ const DB = (function(b64){var bin=atob(b64);var bytes=new Uint8Array(bin.length)
     <span class="material-symbols-outlined" style="position:absolute;left:14px;top:50%;transform:translateY(-50%);color:#948e99;font-size:20px;pointer-events:none;">search</span>
     <input id="mol-search" type="text" placeholder="Rechercher molécule ou mécanisme..."
       oninput="filterMolecules()"
-      style="width:100%;background:#191c22;border:1px solid rgba(255,255,255,0.06);border-radius:1rem;padding:0.875rem 1rem 0.875rem 2.75rem;color:#e1e2eb;font-size:14px;font-family:Inter;outline:none;"/>
+      style="width:100%;background:#161b22;border:1px solid rgba(255,255,255,0.06);border-radius:1rem;padding:0.875rem 1rem 0.875rem 2.75rem;color:#e1e2eb;font-size:14px;font-family:Inter;outline:none;"/>
   </div>
 
   <!-- Filter pills — Voie métabolique -->
@@ -857,17 +994,17 @@ const DB = (function(b64){var bin=atob(b64);var bytes=new Uint8Array(bin.length)
   </div>
   <!-- Note non-exhaustive -->
   <div style="background:rgba(211,188,252,0.06);border-left:3px solid rgba(211,188,252,0.5);border-radius:0 1rem 1rem 0;padding:0.75rem 1rem;margin-bottom:1rem;font-size:12px;color:#cbc4d0;font-family:Inter;line-height:1.6;">
-    ⚠️ <strong style="color:#d3bcfc;">Note :</strong> Cette liste est non-exhaustive et se concentre sur les aliments clés de la Zone Verte. En Zone Rouge, sont indiqués les aliments à exclure catégoriquement du protocole.
+    ⚠️ <strong style="color:#b57bee;">Note :</strong> Cette liste est non-exhaustive et se concentre sur les aliments clés de la Zone Verte. En Zone Rouge, sont indiqués les aliments à exclure catégoriquement du protocole.
   </div>
   <!-- Vérificateur de produit OpenFoodFacts -->
   <div style="margin-bottom:1.25rem;">
     <div style="font-size:13px;color:#948e99;font-family:Inter;margin-bottom:0.5rem;display:flex;align-items:center;gap:0.375rem;">
-      <span class="material-symbols-outlined" style="font-size:16px;color:#d3bcfc;">qr_code_scanner</span>
+      <span class="material-symbols-outlined" style="font-size:16px;color:#b57bee;">qr_code_scanner</span>
       Vérifier un produit (OpenFoodFacts)
     </div>
     <div style="display:flex;gap:0.5rem;">
       <input id="food-search-input" type="text" placeholder="Nom du produit..." class="auth-input" style="flex:1;margin-bottom:0;padding:0.625rem 0.875rem;font-size:13px;" onkeydown="if(event.key==='Enter')searchFood()"/>
-      <button onclick="searchFood()" style="padding:0.625rem 1rem;background:rgba(211,188,252,0.15);border:1px solid rgba(211,188,252,0.3);border-radius:0.875rem;cursor:pointer;color:#d3bcfc;font-family:Inter;font-size:13px;font-weight:600;white-space:nowrap;">Analyser</button>
+      <button onclick="searchFood()" style="padding:0.625rem 1rem;background:rgba(211,188,252,0.15);border:1px solid rgba(211,188,252,0.3);border-radius:0.875rem;cursor:pointer;color:#b57bee;font-family:Inter;font-size:13px;font-weight:600;white-space:nowrap;">Analyser</button>
     </div>
     <div id="food-scanner-result"></div>
   </div>
@@ -894,7 +1031,7 @@ const DB = (function(b64){var bin=atob(b64);var bytes=new Uint8Array(bin.length)
 
   <!-- Recettes du Labo -->
   <div style="font-family:Manrope;font-weight:700;font-size:17px;color:#e1e2eb;margin-bottom:0.75rem;display:flex;align-items:center;gap:0.5rem;">
-    <span class="material-symbols-outlined" style="color:#d3bcfc;font-size:20px;">science</span>
+    <span class="material-symbols-outlined" style="color:#b57bee;font-size:20px;">science</span>
     Recettes du Labo
   </div>
   <div id="recipes-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-bottom:1.5rem;"></div>
@@ -917,20 +1054,20 @@ const DB = (function(b64){var bin=atob(b64);var bytes=new Uint8Array(bin.length)
 
   <!-- Fasting Timeline -->
   <div style="font-family:Manrope;font-weight:700;font-size:15px;color:#cbc4d0;margin-bottom:0.875rem;display:flex;align-items:center;gap:0.5rem;">
-    <span class="material-symbols-outlined" style="color:#d3bcfc;font-size:18px;">timeline</span>
+    <span class="material-symbols-outlined" style="color:#b57bee;font-size:18px;">timeline</span>
     Fasting Timeline Complète
   </div>
   <div style="position:relative;padding-left:3rem;" id="fasting-timeline"></div>
-  <div id="timeline-line" style="position:absolute;left:calc(1rem + 19px);width:2px;background:linear-gradient(to bottom,#d3bcfc,#efb1f9);opacity:0.25;top:0;bottom:0;"></div>
+  <div id="timeline-line" style="position:absolute;left:calc(1rem + 19px);width:2px;background:linear-gradient(to bottom,#b57bee,#c77dff);opacity:0.25;top:0;bottom:0;"></div>
 
   <!-- Protocole Sortie de Jeûne -->
   <div style="margin-top:1.5rem;">
     <div style="font-family:Manrope;font-weight:700;font-size:15px;color:#cbc4d0;margin-bottom:0.5rem;display:flex;align-items:center;gap:0.5rem;">
-      <span class="material-symbols-outlined" style="color:#efb1f9;font-size:18px;">restart_alt</span>
+      <span class="material-symbols-outlined" style="color:#c77dff;font-size:18px;">restart_alt</span>
       Protocole de Sortie de Jeûne
     </div>
     <div style="font-size:12px;color:#948e99;font-family:Inter;margin-bottom:1rem;line-height:1.5;">
-      Règle absolue · Sortie progressive — <strong style="color:#efb1f9;">0 glucide IG élevé les 4 premières heures</strong>
+      Règle absolue · Sortie progressive — <strong style="color:#c77dff;">0 glucide IG élevé les 4 premières heures</strong>
     </div>
     <div id="refeed-section"></div>
   </div>
@@ -959,20 +1096,20 @@ const DB = (function(b64){var bin=atob(b64);var bytes=new Uint8Array(bin.length)
 
   <!-- Profile Hero -->
   <div style="text-align:center;padding:2rem 0 1.5rem;">
-    <div style="width:80px;height:80px;border-radius:9999px;background:linear-gradient(135deg,#d3bcfc,#efb1f9);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 0 40px rgba(211,188,252,0.25);">
-      <span style="font-size:32px;font-weight:800;color:#230f45;font-family:Manrope;">T</span>
+    <div style="width:80px;height:80px;border-radius:9999px;background:linear-gradient(135deg,#b57bee,#c77dff);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 0 40px rgba(211,188,252,0.25);">
+      <span style="font-size:32px;font-weight:800;color:#1a0a33;font-family:Manrope;">T</span>
     </div>
     <div id="profile-hero-name" style="font-family:Manrope;font-weight:800;font-size:22px;color:#e1e2eb;">Jean-Marc</div>
     <div style="display:inline-flex;align-items:center;gap:6px;margin-top:6px;background:rgba(211,188,252,0.1);padding:4px 14px;border-radius:9999px;border:1px solid rgba(211,188,252,0.2);">
-      <span class="material-symbols-outlined" style="font-size:14px;color:#d3bcfc;">grade</span>
-      <span style="font-size:12px;color:#d3bcfc;font-family:Inter;font-weight:600;">Bio-Optimisation Lv. 4</span>
+      <span class="material-symbols-outlined" style="font-size:14px;color:#b57bee;">grade</span>
+      <span style="font-size:12px;color:#b57bee;font-family:Inter;font-weight:600;">Bio-Optimisation Lv. 4</span>
     </div>
   </div>
 
   <!-- Données Patient (pour l'oncologue) -->
-  <div style="background:#191c22;border-radius:1.5rem;padding:1.25rem;margin-bottom:1.5rem;">
+  <div style="background:#161b22;border-radius:1.5rem;padding:1.25rem;margin-bottom:1.5rem;">
     <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:1rem;">
-      <span class="material-symbols-outlined" style="color:#d3bcfc;font-size:20px;">medical_information</span>
+      <span class="material-symbols-outlined" style="color:#b57bee;font-size:20px;">medical_information</span>
       <div style="font-family:Manrope;font-weight:700;font-size:15px;color:#e1e2eb;">Dossier Patient</div>
     </div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-bottom:0.75rem;">
@@ -1001,16 +1138,16 @@ const DB = (function(b64){var bin=atob(b64);var bytes=new Uint8Array(bin.length)
       <div class="patient-label">Traitements en cours</div>
       <input id="patient-traitements" class="patient-input" type="text" placeholder="ex: Hormone, Radiothérapie..."/>
     </div>
-    <button onclick="savePatientData()" style="margin-top:1rem;width:100%;padding:0.625rem;border-radius:9999px;background:rgba(211,188,252,0.1);border:1px solid rgba(211,188,252,0.25);cursor:pointer;color:#d3bcfc;font-family:Manrope;font-weight:700;font-size:13px;" onmouseover="this.style.background='rgba(211,188,252,0.18)'" onmouseout="this.style.background='rgba(211,188,252,0.1)'">
+    <button onclick="savePatientData()" style="margin-top:1rem;width:100%;padding:0.625rem;border-radius:9999px;background:rgba(211,188,252,0.1);border:1px solid rgba(211,188,252,0.25);cursor:pointer;color:#b57bee;font-family:Manrope;font-weight:700;font-size:13px;" onmouseover="this.style.background='rgba(211,188,252,0.18)'" onmouseout="this.style.background='rgba(211,188,252,0.1)'">
       Enregistrer le dossier
     </button>
   </div>
 
   <!-- Bouton Export PDF -->
   <div style="margin-bottom:1.5rem;">
-    <button onclick="generatePDF()" style="width:100%;padding:0.875rem 1.25rem;border-radius:9999px;background:linear-gradient(135deg,#d3bcfc,#efb1f9);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:0.625rem;box-shadow:0 0 24px rgba(211,188,252,0.25);transition:opacity 0.2s;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
-      <span class="material-symbols-outlined" style="color:#230f45;font-size:20px;">picture_as_pdf</span>
-      <span style="font-family:Manrope;font-weight:800;font-size:14px;color:#230f45;letter-spacing:0.03em;">Générer le rapport Oncologue</span>
+    <button onclick="generatePDF()" style="width:100%;padding:0.875rem 1.25rem;border-radius:9999px;background:linear-gradient(135deg,#b57bee,#c77dff);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:0.625rem;box-shadow:0 0 24px rgba(211,188,252,0.25);transition:opacity 0.2s;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+      <span class="material-symbols-outlined" style="color:#1a0a33;font-size:20px;">picture_as_pdf</span>
+      <span style="font-family:Manrope;font-weight:800;font-size:14px;color:#1a0a33;letter-spacing:0.03em;">Générer le rapport Oncologue</span>
     </button>
     <div style="font-size:11px;color:#948e99;font-family:Inter;text-align:center;margin-top:0.5rem;">Bilan GKI · Marqueurs · Phase de jeûne</div>
   </div>
@@ -1027,9 +1164,9 @@ const DB = (function(b64){var bin=atob(b64);var bytes=new Uint8Array(bin.length)
   <!-- Marqueurs Métaboliques -->
   <div style="font-family:Manrope;font-weight:700;font-size:17px;color:#e1e2eb;margin-bottom:0.75rem;">Marqueurs Métaboliques</div>
     <!-- Status row + boutons test (V6.4) -->
-    <div id="profile-status-row" style="display:flex;align-items:center;justify-content:space-between;padding:0.875rem 1rem;background:#191c22;border-radius:1rem;margin-bottom:0.75rem;">
+    <div id="profile-status-row" style="display:flex;align-items:center;justify-content:space-between;padding:0.875rem 1rem;background:#161b22;border-radius:1rem;margin-bottom:0.75rem;">
       <div style="display:flex;align-items:center;gap:0.5rem;">
-        <span class="material-symbols-outlined" style="font-size:18px;color:#d3bcfc;">verified_user</span>
+        <span class="material-symbols-outlined" style="font-size:18px;color:#b57bee;">verified_user</span>
         <span style="font-family:Manrope;font-weight:700;font-size:13px;color:#e1e2eb;">Statut actuel</span>
       </div>
       <span id="profile-status-badge" style="font-family:Manrope;font-weight:800;font-size:12px;color:#948e99;padding:0.25rem 0.75rem;border-radius:9999px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);">Gratuit</span>
@@ -1037,25 +1174,25 @@ const DB = (function(b64){var bin=atob(b64);var bytes=new Uint8Array(bin.length)
     <div style="display:flex;gap:0.5rem;margin-bottom:0.875rem;flex-wrap:wrap;">
       <button onclick="setUserStatus('free')" style="flex:1;min-width:70px;padding:0.4rem 0.375rem;border-radius:0.5rem;background:rgba(148,142,153,0.1);border:1px solid rgba(148,142,153,0.25);color:#948e99;font-family:Manrope;font-weight:700;font-size:11px;cursor:pointer;">Gratuit</button>
       <button onclick="setUserStatus('standard')" style="flex:1;min-width:70px;padding:0.4rem 0.375rem;border-radius:0.5rem;background:rgba(52,211,153,0.08);border:1px solid rgba(52,211,153,0.25);color:#34d399;font-family:Manrope;font-weight:700;font-size:11px;cursor:pointer;">Standard</button>
-      <button onclick="setUserStatus('soutien')" style="flex:1;min-width:70px;padding:0.4rem 0.375rem;border-radius:0.5rem;background:rgba(211,188,252,0.08);border:1px solid rgba(211,188,252,0.25);color:#d3bcfc;font-family:Manrope;font-weight:700;font-size:11px;cursor:pointer;">Soutien</button>
+      <button onclick="setUserStatus('soutien')" style="flex:1;min-width:70px;padding:0.4rem 0.375rem;border-radius:0.5rem;background:rgba(211,188,252,0.08);border:1px solid rgba(211,188,252,0.25);color:#b57bee;font-family:Manrope;font-weight:700;font-size:11px;cursor:pointer;">Soutien</button>
     </div>
   <div id="markers-section" style="display:flex;flex-direction:column;gap:0.75rem;margin-bottom:1rem;"></div>
 
   <!-- Bouton Sauvegarder les marqueurs -->
   <button onclick="saveMarkersToHistory()" style="width:100%;padding:0.75rem;border-radius:9999px;background:rgba(211,188,252,0.1);border:1px solid rgba(211,188,252,0.25);cursor:pointer;display:flex;align-items:center;justify-content:center;gap:0.5rem;margin-bottom:1.5rem;transition:background 0.2s;" onmouseover="this.style.background='rgba(211,188,252,0.18)'" onmouseout="this.style.background='rgba(211,188,252,0.1)'">
-    <span class="material-symbols-outlined" style="color:#d3bcfc;font-size:18px;">save</span>
-    <span style="font-family:Manrope;font-weight:700;font-size:13px;color:#d3bcfc;">Sauvegarder les valeurs</span>
+    <span class="material-symbols-outlined" style="color:#b57bee;font-size:18px;">save</span>
+    <span style="font-family:Manrope;font-weight:700;font-size:13px;color:#b57bee;">Sauvegarder les valeurs</span>
   </button>
 
   <!-- Historique des Marqueurs -->
   <div style="font-family:Manrope;font-weight:700;font-size:17px;color:#e1e2eb;margin-bottom:0.75rem;display:flex;align-items:center;gap:0.5rem;">
-    <span class="material-symbols-outlined" style="color:#d3bcfc;font-size:20px;">show_chart</span>
+    <span class="material-symbols-outlined" style="color:#b57bee;font-size:20px;">show_chart</span>
     Historique des Marqueurs
   </div>
   <div class="card" style="margin-bottom:1.5rem;padding:1.25rem;">
     <div style="display:flex;gap:1rem;margin-bottom:0.75rem;flex-wrap:wrap;">
       <div style="display:flex;align-items:center;gap:0.375rem;">
-        <div style="width:12px;height:3px;border-radius:2px;background:#d3bcfc;"></div>
+        <div style="width:12px;height:3px;border-radius:2px;background:#b57bee;"></div>
         <span style="font-size:11px;color:#cbc4d0;font-family:Inter;">Ferritine (ng/mL)</span>
       </div>
       <div style="display:flex;align-items:center;gap:0.375rem;">
@@ -1083,24 +1220,24 @@ const DB = (function(b64){var bin=atob(b64);var bytes=new Uint8Array(bin.length)
   <div class="card" style="margin-bottom:1.5rem;">
     <div style="display:flex;align-items:flex-end;gap:0.5rem;height:80px;padding:0 0.5rem;">
       <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;">
-        <div style="width:100%;background:#272a31;border-radius:4px 4px 0 0;height:40px;"></div>
+        <div style="width:100%;background:#30363d;border-radius:4px 4px 0 0;height:40px;"></div>
         <span style="font-size:10px;color:#cbc4d0;font-family:Inter;">J-4</span>
       </div>
       <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;">
-        <div style="width:100%;background:#272a31;border-radius:4px 4px 0 0;height:28px;"></div>
+        <div style="width:100%;background:#30363d;border-radius:4px 4px 0 0;height:28px;"></div>
         <span style="font-size:10px;color:#cbc4d0;font-family:Inter;">J-3</span>
       </div>
       <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;">
-        <div style="width:100%;background:#272a31;border-radius:4px 4px 0 0;height:55px;"></div>
+        <div style="width:100%;background:#30363d;border-radius:4px 4px 0 0;height:55px;"></div>
         <span style="font-size:10px;color:#cbc4d0;font-family:Inter;">J-2</span>
       </div>
       <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;">
-        <div style="width:100%;background:#272a31;border-radius:4px 4px 0 0;height:35px;"></div>
+        <div style="width:100%;background:#30363d;border-radius:4px 4px 0 0;height:35px;"></div>
         <span style="font-size:10px;color:#cbc4d0;font-family:Inter;">J-1</span>
       </div>
       <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;">
-        <div style="width:100%;border-radius:4px 4px 0 0;height:20px;background:linear-gradient(135deg,#d3bcfc,#efb1f9);"></div>
-        <span style="font-size:10px;color:#d3bcfc;font-family:Inter;font-weight:600;">Auj.</span>
+        <div style="width:100%;border-radius:4px 4px 0 0;height:20px;background:linear-gradient(135deg,#b57bee,#c77dff);"></div>
+        <span style="font-size:10px;color:#b57bee;font-family:Inter;font-weight:600;">Auj.</span>
       </div>
     </div>
     <div style="font-size:11px;color:#cbc4d0;font-family:Inter;margin-top:0.5rem;text-align:center;">GKI en amélioration · cible &lt; 1</div>
@@ -1113,50 +1250,50 @@ const DB = (function(b64){var bin=atob(b64);var bytes=new Uint8Array(bin.length)
   <!-- ═══ FONDATIONS SCIENTIFIQUES ═══ -->
   <div style="margin-bottom:1.75rem;">
     <div style="font-family:Manrope;font-weight:700;font-size:17px;color:#e1e2eb;margin-bottom:1rem;display:flex;align-items:center;gap:0.5rem;">
-      <span class="material-symbols-outlined" style="color:#d3bcfc;font-size:20px;">menu_book</span>
+      <span class="material-symbols-outlined" style="color:#b57bee;font-size:20px;">menu_book</span>
       Fondations Scientifiques
     </div>
 
     <!-- Seyfried -->
-    <div style="background:#191c22;border-radius:1.25rem;padding:1.25rem;margin-bottom:0.75rem;border-left:3px solid rgba(211,188,252,0.5);">
+    <div style="background:#161b22;border-radius:1.25rem;padding:1.25rem;margin-bottom:0.75rem;border-left:3px solid rgba(211,188,252,0.5);">
       <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem;">
         <div style="width:38px;height:38px;border-radius:0.875rem;background:rgba(211,188,252,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-          <span class="material-symbols-outlined" style="color:#d3bcfc;font-size:18px;">science</span>
+          <span class="material-symbols-outlined" style="color:#b57bee;font-size:18px;">science</span>
         </div>
         <div>
-          <div style="font-family:Manrope;font-weight:700;font-size:14px;color:#d3bcfc;">Approche Métabolique du Cancer</div>
+          <div style="font-family:Manrope;font-weight:700;font-size:14px;color:#b57bee;">Approche Métabolique du Cancer</div>
           <div style="font-size:11px;color:#948e99;font-family:Inter;">Prof. Thomas N. Seyfried · Boston College</div>
         </div>
       </div>
-      <p style="font-size:12px;color:#cbc4d0;line-height:1.65;margin:0 0 0.75rem;font-family:Inter;">Le cancer est une maladie métabolique, non génétique. La tumeur dépend de la fermentation du glucose et de la glutamine. Le protocole <strong style="color:#d3bcfc;">Press-Pulse</strong> — jeûne + molécules ciblées — crée un environnement métabolique hostile à la prolifération.</p>
+      <p style="font-size:12px;color:#cbc4d0;line-height:1.65;margin:0 0 0.75rem;font-family:Inter;">Le cancer est une maladie métabolique, non génétique. La tumeur dépend de la fermentation du glucose et de la glutamine. Le protocole <strong style="color:#b57bee;">Press-Pulse</strong> — jeûne + molécules ciblées — crée un environnement métabolique hostile à la prolifération.</p>
       <div style="display:flex;flex-wrap:wrap;gap:0.375rem;">
-        <span style="font-size:10px;background:rgba(211,188,252,0.1);color:#d3bcfc;padding:2px 9px;border-radius:9999px;font-family:Inter;font-weight:600;">Cancer as a Metabolic Disease (2012)</span>
-        <span style="font-size:10px;background:rgba(211,188,252,0.1);color:#d3bcfc;padding:2px 9px;border-radius:9999px;font-family:Inter;font-weight:600;">Press-Pulse Protocol</span>
-        <span style="font-size:10px;background:rgba(211,188,252,0.1);color:#d3bcfc;padding:2px 9px;border-radius:9999px;font-family:Inter;font-weight:600;">GKI &lt; 1 cible thérapeutique</span>
+        <span style="font-size:10px;background:rgba(211,188,252,0.1);color:#b57bee;padding:2px 9px;border-radius:9999px;font-family:Inter;font-weight:600;">Cancer as a Metabolic Disease (2012)</span>
+        <span style="font-size:10px;background:rgba(211,188,252,0.1);color:#b57bee;padding:2px 9px;border-radius:9999px;font-family:Inter;font-weight:600;">Press-Pulse Protocol</span>
+        <span style="font-size:10px;background:rgba(211,188,252,0.1);color:#b57bee;padding:2px 9px;border-radius:9999px;font-family:Inter;font-weight:600;">GKI &lt; 1 cible thérapeutique</span>
       </div>
     </div>
 
     <!-- Tenenbaum -->
-    <div style="background:#191c22;border-radius:1.25rem;padding:1.25rem;margin-bottom:0.75rem;border-left:3px solid rgba(239,177,249,0.5);">
+    <div style="background:#161b22;border-radius:1.25rem;padding:1.25rem;margin-bottom:0.75rem;border-left:3px solid rgba(239,177,249,0.5);">
       <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem;">
         <div style="width:38px;height:38px;border-radius:0.875rem;background:rgba(239,177,249,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-          <span class="material-symbols-outlined" style="color:#efb1f9;font-size:18px;">medical_services</span>
+          <span class="material-symbols-outlined" style="color:#c77dff;font-size:18px;">medical_services</span>
         </div>
         <div>
-          <div style="font-family:Manrope;font-weight:700;font-size:14px;color:#efb1f9;">Protocoles de l'Espoir</div>
+          <div style="font-family:Manrope;font-weight:700;font-size:14px;color:#c77dff;">Protocoles de l'Espoir</div>
           <div style="font-size:11px;color:#948e99;font-family:Inter;">Dr. Guy Tenenbaum · Oncologie Intégrative</div>
         </div>
       </div>
-      <p style="font-size:12px;color:#cbc4d0;line-height:1.65;margin:0 0 0.75rem;font-family:Inter;">Approche intégrative combinant ciblage métabolique (jeûne thérapeutique, <strong style="color:#efb1f9;">GKI ≤ 1</strong>), molécules repositionnées (Metformine, Artémisinine, Curcumine) et synergies alimentaires. Objectif : créer un environnement métabolique hostile à la tumeur tout en préservant les tissus sains.</p>
+      <p style="font-size:12px;color:#cbc4d0;line-height:1.65;margin:0 0 0.75rem;font-family:Inter;">Approche intégrative combinant ciblage métabolique (jeûne thérapeutique, <strong style="color:#c77dff;">GKI ≤ 1</strong>), molécules repositionnées (Metformine, Artémisinine, Curcumine) et synergies alimentaires. Objectif : créer un environnement métabolique hostile à la tumeur tout en préservant les tissus sains.</p>
       <div style="display:flex;flex-wrap:wrap;gap:0.375rem;">
-        <span style="font-size:10px;background:rgba(239,177,249,0.1);color:#efb1f9;padding:2px 9px;border-radius:9999px;font-family:Inter;font-weight:600;">54 Molécules Anti-Cancer</span>
-        <span style="font-size:10px;background:rgba(239,177,249,0.1);color:#efb1f9;padding:2px 9px;border-radius:9999px;font-family:Inter;font-weight:600;">Jeûne 48–72h · Protocole Seyfried</span>
-        <span style="font-size:10px;background:rgba(239,177,249,0.1);color:#efb1f9;padding:2px 9px;border-radius:9999px;font-family:Inter;font-weight:600;">Synergies Moléculaires</span>
+        <span style="font-size:10px;background:rgba(239,177,249,0.1);color:#c77dff;padding:2px 9px;border-radius:9999px;font-family:Inter;font-weight:600;">54 Molécules Anti-Cancer</span>
+        <span style="font-size:10px;background:rgba(239,177,249,0.1);color:#c77dff;padding:2px 9px;border-radius:9999px;font-family:Inter;font-weight:600;">Jeûne 48–72h · Protocole Seyfried</span>
+        <span style="font-size:10px;background:rgba(239,177,249,0.1);color:#c77dff;padding:2px 9px;border-radius:9999px;font-family:Inter;font-weight:600;">Synergies Moléculaires</span>
       </div>
     </div>
 
     <!-- SCOT/OXCT1 -->
-    <div style="background:#191c22;border-radius:1.25rem;padding:1.25rem;border-left:3px solid rgba(52,211,153,0.5);">
+    <div style="background:#161b22;border-radius:1.25rem;padding:1.25rem;border-left:3px solid rgba(52,211,153,0.5);">
       <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem;">
         <div style="width:38px;height:38px;border-radius:0.875rem;background:rgba(52,211,153,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
           <span class="material-symbols-outlined" style="color:#34d399;font-size:18px;">biotech</span>
@@ -1176,10 +1313,10 @@ const DB = (function(b64){var bin=atob(b64);var bytes=new Uint8Array(bin.length)
   </div>
 
   <!-- Rappels & Notifications -->
-  <div style="background:#191c22;border-radius:1.5rem;padding:1.25rem;margin-bottom:1.5rem;">
+  <div style="background:#161b22;border-radius:1.5rem;padding:1.25rem;margin-bottom:1.5rem;">
     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.625rem;">
       <div style="display:flex;align-items:center;gap:0.625rem;">
-        <span class="material-symbols-outlined" style="color:#d3bcfc;font-size:20px;">notifications_active</span>
+        <span class="material-symbols-outlined" style="color:#b57bee;font-size:20px;">notifications_active</span>
         <div style="font-family:Manrope;font-weight:700;font-size:15px;color:#e1e2eb;">Rappels de saisie</div>
       </div>
       <label class="toggle-switch">
@@ -1188,15 +1325,15 @@ const DB = (function(b64){var bin=atob(b64);var bytes=new Uint8Array(bin.length)
       </label>
     </div>
     <div style="font-size:12px;color:#948e99;font-family:Inter;line-height:1.6;">
-      Notification à <strong style="color:#d3bcfc;">8h00</strong> (Glycémie à jeun) et <strong style="color:#d3bcfc;">20h00</strong> (Bilan GKI du soir).
+      Notification à <strong style="color:#b57bee;">8h00</strong> (Glycémie à jeun) et <strong style="color:#b57bee;">20h00</strong> (Bilan GKI du soir).
     </div>
     <div id="notif-status" style="display:none;margin-top:0.75rem;font-size:12px;font-family:Inter;padding:0.5rem 0.875rem;border-radius:0.75rem;line-height:1.4;"></div>
   </div>
 
   <!-- Disclaimer -->
-  <div style="background:#191c22;border-radius:1rem;padding:1rem;border-left:3px solid rgba(211,188,252,0.3);margin-bottom:1rem;">
+  <div style="background:#161b22;border-radius:1rem;padding:1rem;border-left:3px solid rgba(211,188,252,0.3);margin-bottom:1rem;">
     <div style="display:flex;gap:0.5rem;align-items:flex-start;">
-      <span class="material-symbols-outlined" style="color:#d3bcfc;font-size:18px;margin-top:1px;flex-shrink:0;">info</span>
+      <span class="material-symbols-outlined" style="color:#b57bee;font-size:18px;margin-top:1px;flex-shrink:0;">info</span>
       <p style="font-size:13px;color:#cbc4d0;line-height:1.6;margin:0;font-style:italic;font-family:Inter;">
         L'app Metanoia documente. Elle ne prescrit pas. Consultez votre médecin.
       </p>
@@ -1206,7 +1343,7 @@ const DB = (function(b64){var bin=atob(b64);var bytes=new Uint8Array(bin.length)
   
   <!-- === Statut Analyse IA === -->
   <div style="margin-top:1rem;">
-    <div style="font-family:Manrope;font-weight:800;font-size:14px;color:#d3bcfc;margin-bottom:0.75rem;display:flex;align-items:center;gap:0.5rem;">
+    <div style="font-family:Manrope;font-weight:800;font-size:14px;color:#b57bee;margin-bottom:0.75rem;display:flex;align-items:center;gap:0.5rem;">
       <span>&#x1F916;</span> Intelligence Artificielle
     </div>
     <div style="background:rgba(19,22,30,0.8);border:1px solid rgba(211,188,252,0.12);border-radius:1rem;padding:1rem 1.25rem;">
@@ -1218,13 +1355,13 @@ const DB = (function(b64){var bin=atob(b64);var bytes=new Uint8Array(bin.length)
         Analyse optimis&#xE9;e par <strong style="color:#6b5e7a;">Claude 3.5 Sonnet</strong>
         selon le protocole <strong style="color:#6b5e7a;">Seyfried&#xA0;/&#xA0;Tenenbaum</strong>.<br>
         Quota : <span style="color:#cbc4d0;">1 analyse / mois</span> (gratuit) &#xA0;&#xB7;&#xA0;
-        <span style="color:#d3bcfc;">1 analyse / semaine</span> (premium)
+        <span style="color:#b57bee;">1 analyse / semaine</span> (premium)
       </div>
     </div>
   </div>
 
   <div style="text-align:center;padding:1.25rem 0 0.5rem;border-top:1px solid rgba(255,255,255,0.06);margin-top:0.5rem;">
-    <div style="font-family:Manrope;font-weight:800;font-size:13px;color:#d3bcfc;">Metanoia</div>
+    <div style="font-family:Manrope;font-weight:800;font-size:13px;color:#b57bee;">Metanoia</div>
     <div style="font-family:Inter;font-size:11px;color:#49454f;margin-top:4px;font-style:italic;">Metanoia (Gr.) : Transformation de l&apos;esprit, changement de regard.</div>
   </div>
 
@@ -1320,7 +1457,7 @@ function computeGKI() {
   // Find zone
   let zone = null;
   const seuils = DB.gki_tracker_logic.seuils_ui;
-  if (gki < 1) zone = seuils[4]; // Zone Guy
+  if (gki < 1) zone = seuils[4]; // Fenêtre Thérapeutique Optimale
   else if (gki <= 2) zone = seuils[3]; // Vert
   else if (gki <= 6) zone = seuils[2]; // Jaune
   else if (gki <= 9) zone = seuils[1]; // Orange
@@ -1366,7 +1503,7 @@ function renderFastingCompanion() {
     const is72 = hours === 72;
     const btn = document.createElement('button');
     btn.className = 'palier-btn' + (hours === activePalier ? ' active' : '') + (is72 ? ' seyfried' : '');
-    btn.innerHTML = hours + 'h' + (is72 ? ' <span style="font-size:9px;background:rgba(170,0,255,0.2);color:#AA00FF;padding:1px 6px;border-radius:9999px;vertical-align:middle;">Seyfried</span>' : '');
+    btn.innerHTML = hours + 'h' + (is72 ? ' <span style="font-size:9px;background:rgba(170,0,255,0.2);color:#7b2d8b;padding:1px 6px;border-radius:9999px;vertical-align:middle;">Seyfried</span>' : '');
     btn.onclick = () => selectPalier(hours);
     container.appendChild(btn);
   });
@@ -1405,27 +1542,27 @@ function updatePalierInfo() {
     const name = typeof s === 'string' ? s : (s.molecule || s.nom || s.name || '');
     const dosage = typeof s === 'object' ? (s.dosage || '') : '';
     const pill = document.createElement('div');
-    pill.style.cssText = 'background:#272a31;border-radius:9999px;padding:4px 12px;font-size:12px;color:#cbc4d0;font-family:Inter;';
-    pill.innerHTML = '<span style="color:#d3bcfc;font-weight:600;">' + name + '</span>' + (dosage ? '<span style="color:#948e99;"> · ' + dosage + '</span>' : '');
+    pill.style.cssText = 'background:#30363d;border-radius:9999px;padding:4px 12px;font-size:12px;color:#cbc4d0;font-family:Inter;';
+    pill.innerHTML = '<span style="color:#b57bee;font-weight:600;">' + name + '</span>' + (dosage ? '<span style="color:#948e99;"> · ' + dosage + '</span>' : '');
     suppsContainer.appendChild(pill);
   });
 
   // Special 72h style
   const infoBox = document.getElementById('palier-info');
   if (hours === 72) {
-    infoBox.style.borderLeft = '3px solid #AA00FF';
+    infoBox.style.borderLeft = '3px solid #7b2d8b';
     infoBox.style.background = 'rgba(170,0,255,0.05)';
   } else {
     infoBox.style.borderLeft = '';
-    infoBox.style.background = '#1d2026';
+    infoBox.style.background = '#21262d';
   }
 }
 
 // ============ CIBLES METABOLIQUES ============
 function renderCiblesMetaboliques() {
   const pathwayInfo = [
-    {id:'Glycolyse', icon:'local_fire_department', color:'#d3bcfc', desc:'Inhibition de la glycolyse anaérobie tumorale'},
-    {id:'Glutaminolyse', icon:'bubble_chart', color:'#efb1f9', desc:'Blocage de la glutaminolyse — carburant secondaire'},
+    {id:'Glycolyse', icon:'local_fire_department', color:'#b57bee', desc:'Inhibition de la glycolyse anaérobie tumorale'},
+    {id:'Glutaminolyse', icon:'bubble_chart', color:'#c77dff', desc:'Blocage de la glutaminolyse — carburant secondaire'},
     {id:'Acidose/pH', icon:'water_drop', color:'#34d399', desc:'Neutralisation micro-environnement acide tumoral'},
     {id:'Angiogenese', icon:'device_hub', color:'#fb7185', desc:'Réduction néo-angiogenèse tumorale'},
   ];
@@ -1439,7 +1576,7 @@ function renderCiblesMetaboliques() {
   pathwayInfo.forEach(p => {
     const count = counts[p.id] || counts[p.id.replace('/',' /')] || 0;
     const card = document.createElement('div');
-    card.style.cssText = 'background:#191c22;border-radius:1.25rem;padding:1rem;';
+    card.style.cssText = 'background:#161b22;border-radius:1.25rem;padding:1rem;';
     card.setAttribute('data-marker-card', 'true');
     card.innerHTML = `
       <div style="width:40px;height:40px;border-radius:0.875rem;background:${p.color}18;display:flex;align-items:center;justify-content:center;margin-bottom:0.75rem;">
@@ -1456,8 +1593,8 @@ function renderCiblesMetaboliques() {
 // ============ MOLECULES ============
 function getPathwayColor(pathway) {
   const map = {
-    'Glycolyse': '#d3bcfc',
-    'Glutaminolyse': '#efb1f9',
+    'Glycolyse': '#b57bee',
+    'Glutaminolyse': '#c77dff',
     'Acidose/pH': '#34d399',
     'Angiogenese': '#fb7185',
   };
@@ -1523,16 +1660,16 @@ function renderMolecules() {
       </div>
       <div class="molecule-details" id="mol-details-${realIdx}" style="display:none;margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.05);">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-bottom:0.875rem;">
-          <div style="background:#272a31;border-radius:0.875rem;padding:0.75rem;">
+          <div style="background:#30363d;border-radius:0.875rem;padding:0.75rem;">
             <div style="font-size:10px;color:#948e99;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px;font-family:Inter;">Dosage</div>
             <div style="font-size:13px;color:#e1e2eb;font-weight:600;font-family:Inter;">${m.dosage||'N/A'}</div>
           </div>
-          <div style="background:#272a31;border-radius:0.875rem;padding:0.75rem;">
+          <div style="background:#30363d;border-radius:0.875rem;padding:0.75rem;">
             <div style="font-size:10px;color:#948e99;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px;font-family:Inter;">Timing</div>
             <div style="font-size:13px;color:#e1e2eb;font-weight:600;font-family:Inter;">${m.timing||'N/A'}</div>
           </div>
         </div>
-        ${m.notes ? `<div style="font-size:13px;color:#cbc4d0;line-height:1.6;word-wrap:break-word;font-family:Inter;background:#272a31;padding:0.875rem;border-radius:0.875rem;margin-bottom:0.75rem;">${m.notes}</div>` : ''}
+        ${m.notes ? `<div style="font-size:13px;color:#cbc4d0;line-height:1.6;word-wrap:break-word;font-family:Inter;background:#30363d;padding:0.875rem;border-radius:0.875rem;margin-bottom:0.75rem;">${m.notes}</div>` : ''}
         ${(() => {
           const note = getMoleculeNote(m.molecule);
           if (!note) return '';
@@ -1541,7 +1678,7 @@ function renderMolecules() {
           if (note.antagonism) html += `<div style="background:rgba(251,113,133,0.06);border-left:3px solid rgba(251,113,133,0.5);border-radius:0 0.75rem 0.75rem 0;padding:0.75rem;margin-bottom:0.5rem;font-size:12px;color:#fb7185;font-family:Inter;line-height:1.6;word-wrap:break-word;">${note.antagonism}</div>`;
           return html;
         })()}
-        ${sources.length > 0 ? `<div style="margin-top:0.5rem;display:flex;flex-wrap:wrap;gap:0.5rem;">${sources.map(s => `<span style="font-size:11px;background:rgba(211,188,252,0.08);color:#d3bcfc;padding:2px 10px;border-radius:9999px;font-family:Inter;">${s}</span>`).join('')}</div>` : ''}
+        ${sources.length > 0 ? `<div style="margin-top:0.5rem;display:flex;flex-wrap:wrap;gap:0.5rem;">${sources.map(s => `<span style="font-size:11px;background:rgba(211,188,252,0.08);color:#b57bee;padding:2px 10px;border-radius:9999px;font-family:Inter;">${s}</span>`).join('')}</div>` : ''}
       </div>
     `;
     list.appendChild(card);
@@ -1634,33 +1771,118 @@ function renderCuisine() {
     redList.appendChild(el);
   });
 
-  // Recipes (cliquables → modal)
+  
+  // ── Recettes : deux sections ─────────────────────────────────────────────
   const recipesGrid = document.getElementById('recipes-grid');
+  if (!recipesGrid) return;
   recipesGrid.innerHTML = '';
-  (DB.recipes || []).forEach((r, idx) => {
-    const name = r.name || r.nom || 'Recette';
+
+  const allRecipes = DB.recipes || [];
+
+  // Classify: Protocole Tenenbaum = name contains Tenenbaum OR
+  //           category contains therapeutique/tenenbaum
+  function isTenenbaum(r) {
+    const nm  = (r.name || r.nom || '').toLowerCase();
+    const cat = (r.categorie || r.category || r.type || '').toLowerCase();
+    return nm.includes('tenenbaum') || nm.includes('potion magique') ||
+           cat.includes('therapeutique') || cat.includes('tenenbaum');
+  }
+
+  const fondamentaux = allRecipes.filter(r => !isTenenbaum(r));
+  const tenenbaum    = allRecipes.filter(r =>  isTenenbaum(r));
+
+  function buildRecipeCard(r, idx) {
+    const name        = r.name || r.nom || 'Recette';
     const ingredients = r.ingredients || [];
-    const preview = ingredients.slice(0,3).join(', ');
+    const preview     = ingredients.slice(0, 3).join(', ');
+    const isTen       = isTenenbaum(r);
+    const accentColor = isTen ? '#9b59b6' : '#34d399';
+    const badgeText   = isTen ? 'Tenenbaum' : 'C\u00e9tog\u00e8ne';
+    const badgeBg     = isTen ? 'rgba(155,89,182,0.15)' : 'rgba(52,211,153,0.12)';
+
     const card = document.createElement('div');
-    card.style.cssText = 'background:#191c22;border-radius:1.25rem;padding:1rem;cursor:pointer;transition:transform 0.15s,box-shadow 0.15s;';
-    card.onmouseenter = () => { card.style.transform = 'translateY(-2px)'; card.style.boxShadow = '0 8px 24px rgba(0,0,0,0.3)'; };
-    card.onmouseleave = () => { card.style.transform = ''; card.style.boxShadow = ''; };
+    card.style.cssText = `
+      background:#161b22;
+      border:1px solid rgba(48,54,61,0.7);
+      border-radius:1.25rem;
+      padding:1rem;
+      cursor:pointer;
+      transition:transform 0.15s,box-shadow 0.15s,border-color 0.2s;
+    `;
+    card.onmouseenter = () => {
+      card.style.transform   = 'translateY(-2px)';
+      card.style.boxShadow   = `0 8px 24px rgba(0,0,0,0.35)`;
+      card.style.borderColor = accentColor + '55';
+    };
+    card.onmouseleave = () => {
+      card.style.transform   = '';
+      card.style.boxShadow   = '';
+      card.style.borderColor = 'rgba(48,54,61,0.7)';
+    };
     card.onclick = () => openRecipeModal(idx);
     card.innerHTML = `
       <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.625rem;">
-        <span class="material-symbols-outlined" style="color:#d3bcfc;font-size:18px;">restaurant</span>
-        <span style="font-size:9px;background:rgba(211,188,252,0.12);color:#d3bcfc;padding:2px 8px;border-radius:9999px;font-family:Inter;font-weight:600;white-space:nowrap;">Tenenbaum</span>
+        <span class="material-symbols-outlined" style="color:${accentColor};font-size:18px;">restaurant</span>
+        <span style="font-size:9px;background:${badgeBg};color:${accentColor};padding:2px 8px;border-radius:9999px;font-family:Inter;font-weight:600;white-space:nowrap;">${badgeText}</span>
       </div>
       <div style="font-family:Manrope;font-weight:700;font-size:13px;color:#e1e2eb;margin-bottom:6px;line-height:1.3;">${name}</div>
-      ${preview ? `<div style="font-size:11px;color:#948e99;font-family:Inter;line-height:1.4;">${preview}${ingredients.length > 3 ? ' +' + (ingredients.length - 3) + ' ingr.' : ''}</div>` : ''}
-      <div style="margin-top:0.5rem;font-size:10px;color:#d3bcfc;font-family:Inter;display:flex;align-items:center;gap:3px;">
+      ${preview ? `<div style="font-size:11px;color:#6e7681;font-family:Inter;line-height:1.4;">${preview}${ingredients.length > 3 ? ' +' + (ingredients.length - 3) + ' ingr.' : ''}</div>` : ''}
+      <div style="margin-top:0.5rem;font-size:10px;color:${accentColor};font-family:Inter;display:flex;align-items:center;gap:3px;">
         <span class="material-symbols-outlined" style="font-size:13px;">expand_circle_down</span> Voir la recette
       </div>
     `;
-    recipesGrid.appendChild(card);
-  });
+    return card;
+  }
+
+  function buildSection(title, icon, color, recipes, startIdx) {
+    if (!recipes.length) return;
+
+    const section = document.createElement('div');
+    section.style.cssText = 'margin-bottom:1.5rem;';
+
+    // Section header
+    const header = document.createElement('div');
+    header.style.cssText = `
+      display:flex;align-items:center;gap:0.625rem;
+      margin-bottom:0.875rem;
+      padding-bottom:0.625rem;
+      border-bottom:1px solid rgba(48,54,61,0.6);
+    `;
+    header.innerHTML = `
+      <span class="material-symbols-outlined" style="color:${color};font-size:18px;">${icon}</span>
+      <span style="font-family:Manrope;font-weight:800;font-size:14px;color:#e1e2eb;">${title}</span>
+      <span style="font-size:11px;color:#6e7681;font-family:Inter;margin-left:auto;">${recipes.length} recette${recipes.length > 1 ? 's' : ''}</span>
+    `;
+    section.appendChild(header);
+
+    // Grid
+    const grid = document.createElement('div');
+    grid.style.cssText = 'display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;';
+    recipes.forEach((r, i) => {
+      const globalIdx = allRecipes.indexOf(r);
+      grid.appendChild(buildRecipeCard(r, globalIdx));
+    });
+    section.appendChild(grid);
+    recipesGrid.appendChild(section);
+  }
+
+  buildSection(
+    'Fondamentaux',
+    'eco',
+    '#34d399',
+    fondamentaux,
+    0
+  );
+  buildSection(
+    'Protocole Tenenbaum',
+    'science',
+    '#9b59b6',
+    tenenbaum,
+    0
+  );
 
 }
+
 
 // ============ REFEED INTERACTIF ============
 const REFEED_STEPS = [
@@ -1679,7 +1901,7 @@ const REFEED_STEPS = [
     time: 'H+4',
     label: 'Protéines Légères',
     icon: 'egg_alt',
-    color: '#d3bcfc',
+    color: '#b57bee',
     description: 'Réintroduction douce par les protéines et les graisses saines. L\'insuline reste stable — aucun glucide rapide.',
     aliments: ['Œufs brouillés ou à la coque (entiers)', 'Sardines ou saumon sauvage', 'Avocat (graisses mono-insaturées)', 'Pecorino Romano (0 glucides)', 'Yaourt coco non sucré + probiotiques'],
     interdits: ['Pain, pâtes, riz', 'Fruits sucrés (IG élevé)', 'Produits laitiers vache'],
@@ -1690,7 +1912,7 @@ const REFEED_STEPS = [
     time: 'H+12',
     label: 'Repas Complet Zone Verte',
     icon: 'restaurant',
-    color: '#efb1f9',
+    color: '#c77dff',
     description: 'Retour au protocole alimentaire Metanoia complet. Prioriser crucifères, bonnes graisses, et aliments liés aux molécules actives.',
     aliments: ['Brocoli vapeur + Curcuma + Poivre noir', 'Saumon sauvage ou sardines + huile d\'olive', 'Graines de lin moulues + graines de chia', 'Ail frais cru (allicine activée)', 'Baies organiques (myrtilles, framboises)'],
     interdits: ['Aucune restriction Zone Verte', 'Éviter glucides raffinés même tard'],
@@ -1708,7 +1930,7 @@ function renderRefeed() {
   REFEED_STEPS.forEach((step, i) => {
     const isOpen = refeedExpanded === i;
     const card = document.createElement('div');
-    card.style.cssText = `background:#191c22;border-radius:1.5rem;margin-bottom:0.75rem;overflow:hidden;border:1px solid ${isOpen ? step.color+'40' : 'rgba(255,255,255,0.04)'};transition:border-color 0.3s;`;
+    card.style.cssText = `background:#161b22;border-radius:1.5rem;margin-bottom:0.75rem;overflow:hidden;border:1px solid ${isOpen ? step.color+'40' : 'rgba(255,255,255,0.04)'};transition:border-color 0.3s;`;
     card.innerHTML = `
       <!-- Header cliquable -->
       <div onclick="toggleRefeed(${i})" style="padding:1rem 1.25rem;cursor:pointer;display:flex;align-items:center;gap:0.875rem;user-select:none;">
@@ -1751,9 +1973,9 @@ function renderRefeed() {
         </div>
 
         <!-- Molécules actives liées -->
-        <div style="font-size:11px;color:#d3bcfc;font-family:Inter;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.5rem;">🔗 Molécules actives</div>
+        <div style="font-size:11px;color:#b57bee;font-family:Inter;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.5rem;">🔗 Molécules actives</div>
         <div style="display:flex;flex-wrap:wrap;gap:0.375rem;">
-          ${step.molecules.map(m => `<span style="font-size:11px;background:rgba(211,188,252,0.1);color:#d3bcfc;padding:3px 12px;border-radius:9999px;font-family:Inter;border:1px solid rgba(211,188,252,0.2);">${m}</span>`).join('')}
+          ${step.molecules.map(m => `<span style="font-size:11px;background:rgba(211,188,252,0.1);color:#b57bee;padding:3px 12px;border-radius:9999px;font-family:Inter;border:1px solid rgba(211,188,252,0.2);">${m}</span>`).join('')}
         </div>
       </div>` : ''}
     `;
@@ -1782,13 +2004,13 @@ function renderLifestyle() {
   const PILLAR_ICONS = { 'Sommeil': 'bedtime', 'Stress': 'self_improvement', 'Choc Thermique': 'thermometer', 'Exercice': 'directions_run', 'Nutrition': 'nutrition', 'Hydratation': 'water_drop' };
   const pillars = DB.lifestyle_pillars.pillars || [];
   pillars.forEach(p => {
-    const color = p.couleur_hex || '#d3bcfc';
+    const color = p.couleur_hex || '#b57bee';
     // Texte descriptif complet — aucune troncature
     const isThermique = p.pilier === 'Choc Thermique';
     let mecanismeHtml = '';
     if (isThermique) {
       // Choc Thermique a des champs séparés sauna/douche froide
-      if (p.mecanisme_sauna) mecanismeHtml += `<div style="font-size:12px;color:#d3bcfc;font-weight:700;font-family:Manrope;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px;">🔥 Sauna</div><div style="font-size:13px;color:#cbc4d0;line-height:1.6;font-family:Inter;margin-bottom:0.75rem;word-wrap:break-word;">${p.mecanisme_sauna}</div>`;
+      if (p.mecanisme_sauna) mecanismeHtml += `<div style="font-size:12px;color:#b57bee;font-weight:700;font-family:Manrope;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px;">🔥 Sauna</div><div style="font-size:13px;color:#cbc4d0;line-height:1.6;font-family:Inter;margin-bottom:0.75rem;word-wrap:break-word;">${p.mecanisme_sauna}</div>`;
       if (p.mecanisme_douche_froide) mecanismeHtml += `<div style="font-size:12px;color:#34d399;font-weight:700;font-family:Manrope;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px;">❄️ Douche Froide</div><div style="font-size:13px;color:#cbc4d0;line-height:1.6;font-family:Inter;word-wrap:break-word;">${p.mecanisme_douche_froide}</div>`;
     } else {
       mecanismeHtml = `<div style="font-size:13px;color:#cbc4d0;line-height:1.6;font-family:Inter;margin-bottom:0.875rem;word-wrap:break-word;overflow-wrap:break-word;">${p.mecanisme||''}</div>`;
@@ -1798,7 +2020,7 @@ function renderLifestyle() {
     const molLinks = (p.molecules_liees || []);
     const iconKey = PILLAR_ICONS[p.pilier] || p.icon_key || 'star';
     const card = document.createElement('div');
-    card.style.cssText = 'background:#191c22;border-radius:1.5rem;padding:1.25rem;';
+    card.style.cssText = 'background:#161b22;border-radius:1.5rem;padding:1.25rem;';
     card.innerHTML = `
       <div style="display:flex;align-items:center;gap:0.875rem;margin-bottom:0.875rem;">
         <div style="width:48px;height:48px;border-radius:1rem;background:${color}15;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
@@ -1808,7 +2030,7 @@ function renderLifestyle() {
           <div style="font-family:Manrope;font-weight:800;font-size:17px;color:${color};">${p.pilier||''}</div>
           <div style="font-size:12px;color:#948e99;font-family:Inter;word-wrap:break-word;">${p.label||''}</div>
         </div>
-        ${p.badge_expert ? `<span style="margin-left:auto;font-size:10px;background:rgba(211,188,252,0.1);color:#d3bcfc;padding:3px 10px;border-radius:9999px;font-family:Inter;white-space:nowrap;flex-shrink:0;">${p.badge_expert}</span>` : ''}
+        ${p.badge_expert ? `<span style="margin-left:auto;font-size:10px;background:rgba(211,188,252,0.1);color:#b57bee;padding:3px 10px;border-radius:9999px;font-family:Inter;white-space:nowrap;flex-shrink:0;">${p.badge_expert}</span>` : ''}
       </div>
       ${mecanismeHtml}
       ${protocole.length > 0 ? `
@@ -1840,7 +2062,7 @@ function renderLifestyle() {
   timeline.forEach((step, i) => {
     const hours = step.palier_heures || palierMap[i];
     const is72 = hours === 72;
-    const color = is72 ? '#AA00FF' : (i < 2 ? '#34d399' : i < 4 ? '#d3bcfc' : '#efb1f9');
+    const color = is72 ? '#7b2d8b' : (i < 2 ? '#34d399' : i < 4 ? '#b57bee' : '#c77dff');
     const supps = step.supplements_recommandes || [];
 
     const item = document.createElement('div');
@@ -1852,10 +2074,10 @@ function renderLifestyle() {
         </div>
         ${i < timeline.length - 1 ? `<div style="width:2px;background:linear-gradient(to bottom,${color},transparent);opacity:0.3;height:calc(100% + 2rem - 40px);margin-left:19px;margin-top:4px;"></div>` : ''}
       </div>
-      <div style="background:#191c22;border-radius:1.25rem;padding:1rem;${is72 ? 'border:1px solid rgba(170,0,255,0.3);background:rgba(170,0,255,0.05);' : ''}">
+      <div style="background:#161b22;border-radius:1.25rem;padding:1rem;${is72 ? 'border:1px solid rgba(170,0,255,0.3);background:rgba(170,0,255,0.05);' : ''}">
         <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.625rem;flex-wrap:wrap;">
           <span style="font-family:Manrope;font-weight:700;font-size:14px;color:${color};">${step.label||hours+'h'}</span>
-          ${is72 ? `<span style="font-size:10px;background:#AA00FF;color:#fff;padding:2px 10px;border-radius:9999px;font-family:Inter;font-weight:600;">Protocole Seyfried</span>` : ''}
+          ${is72 ? `<span style="font-size:10px;background:#7b2d8b;color:#fff;padding:2px 10px;border-radius:9999px;font-family:Inter;font-weight:600;">Protocole Seyfried</span>` : ''}
           ${step.gki_attendu ? `<span style="font-size:10px;color:#948e99;font-family:Inter;">GKI: ${step.gki_attendu}</span>` : ''}
         </div>
         <div style="font-size:12px;color:#cbc4d0;line-height:1.5;font-family:Inter;margin-bottom:0.75rem;">${step.etat_physiologique||''}</div>
@@ -1863,7 +2085,7 @@ function renderLifestyle() {
         <div style="display:flex;flex-wrap:wrap;gap:0.375rem;">
           ${supps.map(s => {
             const name = typeof s === 'string' ? s : (s.molecule || s.nom || s.name || '');
-            return `<span style="font-size:11px;background:rgba(211,188,252,0.08);color:#d3bcfc;padding:2px 10px;border-radius:9999px;font-family:Inter;">${name}</span>`;
+            return `<span style="font-size:11px;background:rgba(211,188,252,0.08);color:#b57bee;padding:2px 10px;border-radius:9999px;font-family:Inter;">${name}</span>`;
           }).join('')}
         </div>` : ''}
       </div>
@@ -1924,7 +2146,7 @@ function updateMarkerUI(input) {
     } catch(e) {}
 
   } else {
-    if (fill)  { fill.style.width = '4%'; fill.style.background = '#2d3140'; fill.style.opacity = '0.45'; }
+    if (fill)  { fill.style.width = '4%'; fill.style.background = '#30363d'; fill.style.opacity = '0.45'; }
     if (label) { label.textContent = '\u2014'; label.style.color = '#948e99'; }
   }
 }
@@ -1936,17 +2158,17 @@ function renderProfil() {
   const container = document.getElementById('markers-section');
   container.innerHTML = '';
   const markerDefs = [
-    {key:'Ferritine', label:'Ferritine', target:'100–200 ng/mL', color:'#d3bcfc', icon:'bloodtype'},
-    {key:'D_Dimeres', label:'D-Dimères', target:'< 500 ng/mL', color:'#efb1f9', icon:'monitor_heart'},
+    {key:'Ferritine', label:'Ferritine', target:'100–200 ng/mL', color:'#b57bee', icon:'bloodtype'},
+    {key:'D_Dimeres', label:'D-Dimères', target:'< 500 ng/mL', color:'#c77dff', icon:'monitor_heart'},
     {key:'Vitamine_D3', label:'Vitamine D3', target:'60–100 ng/mL', color:'#34d399', icon:'wb_sunny'},
     {key:'PSA', label:'PSA', target:'< 1 ng/mL', color:'#fb7185', icon:'biotech'},
-    {key:'Oncosure', label:'Oncosure', target:'< 48 (cible Tenenbaum)', color:'#efb1f9', icon:'science'},
-    {key:'GKI', label:'GKI', target:'< 2 (cible Verte)', color:'#AA00FF', icon:'analytics'},
+    {key:'Oncosure', label:'Oncosure', target:'< 48 (cible Tenenbaum)', color:'#c77dff', icon:'science'},
+    {key:'GKI', label:'GKI', target:'< 2 (cible Verte)', color:'#7b2d8b', icon:'analytics'},
   ];
   markerDefs.forEach(def => {
     const m = markers[def.key] || {};
     const card = document.createElement('div');
-    card.style.cssText = 'background:#191c22;border-radius:1.25rem;padding:1rem;';
+    card.style.cssText = 'background:#161b22;border-radius:1.25rem;padding:1rem;';
     card.setAttribute('data-marker-card', 'true');
     card.innerHTML = `
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.75rem;">
@@ -1971,7 +2193,7 @@ function renderProfil() {
       </div>
       <div style="display:flex;align-items:center;justify-content:space-between;margin-top:0.25rem;margin-bottom:0.375rem;">
         <span class="marker-status-label" data-target-color>&#x2014;</span>
-        <span style="font-size:10px;color:#2d3140;font-family:Inter;">&#x2022;</span>
+        <span style="font-size:10px;color:#30363d;font-family:Inter;">&#x2022;</span>
       </div>
       <div class="progress-track">
         <div data-progress-fill style="height:6px;border-radius:9999px;background:${def.color};width:4%;opacity:0.45;transition:width 0.4s ease,background 0.3s ease;"></div>
@@ -1987,7 +2209,7 @@ function renderProfil() {
   (DB.experts || []).slice(0,6).forEach(e => {
     const badge = document.createElement('div');
     badge.className = 'expert-badge';
-    badge.innerHTML = `<span class="material-symbols-outlined" style="font-size:14px;color:#d3bcfc;">person</span>${e.name||''}`;
+    badge.innerHTML = `<span class="material-symbols-outlined" style="font-size:14px;color:#b57bee;">person</span>${e.name||''}`;
     expertsBadges.appendChild(badge);
   });
 }
@@ -2259,10 +2481,10 @@ function renderMarkerHistory() {
         {
           label: 'Ferritine (ng/mL)',
           data: ferritineData,
-          borderColor: '#d3bcfc',
+          borderColor: '#b57bee',
           backgroundColor: 'rgba(211,188,252,0.08)',
           borderWidth: 2,
-          pointBackgroundColor: '#d3bcfc',
+          pointBackgroundColor: '#b57bee',
           pointRadius: 4,
           pointHoverRadius: 6,
           tension: 0.4,
@@ -2291,8 +2513,8 @@ function renderMarkerHistory() {
       plugins: {
         legend: { display: false },
         tooltip: {
-          backgroundColor: '#1d2026',
-          titleColor: '#d3bcfc',
+          backgroundColor: '#21262d',
+          titleColor: '#b57bee',
           bodyColor: '#cbc4d0',
           borderColor: 'rgba(211,188,252,0.2)',
           borderWidth: 1,
@@ -2318,9 +2540,9 @@ function renderMarkerHistory() {
   // Entrées textuelles
   if (entriesEl) {
     entriesEl.innerHTML = history.slice().reverse().map(h => `
-      <div style="display:flex;align-items:center;justify-content:space-between;padding:0.5rem 0.75rem;background:#191c22;border-radius:0.75rem;">
+      <div style="display:flex;align-items:center;justify-content:space-between;padding:0.5rem 0.75rem;background:#161b22;border-radius:0.75rem;">
         <span style="font-size:11px;color:#948e99;font-family:Inter;min-width:50px;">${h.date}</span>
-        <span style="font-size:12px;color:#d3bcfc;font-family:Inter;">${h.ferritine ? `Ferritine: <strong>${h.ferritine}</strong>` : ''}</span>
+        <span style="font-size:12px;color:#b57bee;font-family:Inter;">${h.ferritine ? `Ferritine: <strong>${h.ferritine}</strong>` : ''}</span>
         <span style="font-size:12px;color:#34d399;font-family:Inter;">GKI: <strong>${h.gki||'—'}</strong></span>
         <span style="font-size:10px;color:#948e99;font-family:Inter;">${h.palier}h jeûne</span>
       </div>
@@ -2387,7 +2609,7 @@ function updateVigilanceBanner(gki) {
       <span class="material-symbols-outlined" style="color:#34d399;font-size:22px;flex-shrink:0;">verified</span>
       <div>
         <div style="font-family:Manrope;font-weight:700;font-size:13px;color:#34d399;margin-bottom:2px;">✅ État Optimal : Autophagie et Cétose profonde actives.</div>
-        <div style="font-size:12px;color:#cbc4d0;font-family:Inter;line-height:1.4;">GKI ${gki.toFixed(1)} < 0.8 — Zone Guy Tenenbaum. Maintenir le protocole.</div>
+        <div style="font-size:12px;color:#cbc4d0;font-family:Inter;line-height:1.4;">GKI ${gki.toFixed(1)} < 0.8 — Fenêtre Thérapeutique Optimale. Maintenir le protocole.</div>
       </div>
     `;
   } else {
@@ -2493,7 +2715,7 @@ function initDemoData() {
     traitements: 'Temozolomide · Radiothérapie · Protocole Seyfried 72h'
   }));
 
-  // ── Historique 7 jours — descente progressive GKI vers Zone Guy ──
+  // ── Historique 7 jours — descente progressive GKI vers Fenêtre Thérapeutique ──
   const today = new Date();
   function dLabel(n) {
     const d = new Date(today);
@@ -2909,12 +3131,12 @@ function openPackModal() {
   if (container) {
     container.innerHTML = db_mols.map(m => {
       const hasLink = m.buyLink && m.buyLink !== '#';
-      return `<div style="display:flex;align-items:center;justify-content:space-between;padding:0.75rem;background:#272a31;border-radius:0.875rem;margin-bottom:0.5rem;">
+      return `<div style="display:flex;align-items:center;justify-content:space-between;padding:0.75rem;background:#30363d;border-radius:0.875rem;margin-bottom:0.5rem;">
         <div>
           <div style="font-family:Manrope;font-weight:700;font-size:13px;color:#e1e2eb;">${m.molecule}</div>
           ${m.price ? `<div style="font-size:11px;color:#34d399;font-family:Inter;margin-top:2px;">${m.price} \u2014 ${m.sourceName||''}</div>` : `<div style="font-size:11px;color:#948e99;font-family:Inter;margin-top:2px;">${m.sourceName||''}</div>`}
         </div>
-        ${hasLink ? `<a href="${m.buyLink}" target="_blank" rel="noopener" style="padding:0.375rem 0.875rem;background:linear-gradient(135deg,#d3bcfc,#efb1f9);border-radius:9999px;font-family:Manrope;font-weight:700;font-size:12px;color:#230f45;text-decoration:none;flex-shrink:0;">Acheter</a>` : `<span style="font-size:11px;color:#49454f;font-family:Inter;">Sur ordonnance</span>`}
+        ${hasLink ? `<a href="${m.buyLink}" target="_blank" rel="noopener" style="padding:0.375rem 0.875rem;background:linear-gradient(135deg,#b57bee,#c77dff);border-radius:9999px;font-family:Manrope;font-weight:700;font-size:12px;color:#1a0a33;text-decoration:none;flex-shrink:0;">Acheter</a>` : `<span style="font-size:11px;color:#49454f;font-family:Inter;">Sur ordonnance</span>`}
       </div>`;
     }).join('');
   }
@@ -2967,7 +3189,7 @@ function applyStatusLocks() {
         const curt = document.createElement('div');
         curt.className = 'mol-lock-curtain';
         curt.innerHTML = '<span style="font-size:24px;pointer-events:none;">&#x1F512;</span>'
-          + '<span style="font-family:Manrope;font-weight:700;font-size:10px;color:#d3bcfc;pointer-events:none;">Standard requis</span>'
+          + '<span style="font-family:Manrope;font-weight:700;font-size:10px;color:#b57bee;pointer-events:none;">Standard requis</span>'
           + '<span style="font-family:Inter;font-size:9px;color:rgba(211,188,252,.55);text-decoration:underline;pointer-events:none;">D&#xE9;bloquer l&#x2019;acc&#xE8;s</span>';
         curt.onclick = () => openUpgradeModal('markers');
         card.appendChild(curt);
@@ -2979,7 +3201,7 @@ function applyStatusLocks() {
   const badge = document.getElementById('profile-status-badge');
   if (badge) {
     const L = {free:'Gratuit',standard:'Standard',soutien:'Soutien'};
-    const C = {free:'#948e99',standard:'#34d399',soutien:'#d3bcfc'};
+    const C = {free:'#948e99',standard:'#34d399',soutien:'#b57bee'};
     badge.textContent = L[userStatus]||userStatus;
     badge.style.color = C[userStatus]||'#e1e2eb';
   }
@@ -2999,9 +3221,9 @@ function setUserStatus(newStatus) {
   const toast = document.createElement('div');
   toast.style.cssText = [
     'position:fixed;bottom:5.5rem;left:50%;transform:translateX(-50%);',
-    'background:#191c22;border:1px solid rgba(211,188,252,0.25);',
+    'background:#161b22;border:1px solid rgba(211,188,252,0.25);',
     'border-radius:9999px;padding:0.5rem 1.25rem;',
-    'font-family:Manrope;font-weight:700;font-size:13px;color:#d3bcfc;',
+    'font-family:Manrope;font-weight:700;font-size:13px;color:#b57bee;',
     'z-index:9999;white-space:nowrap;',
     'box-shadow:0 4px 20px rgba(0,0,0,0.4);',
   ].join('');
@@ -3015,18 +3237,18 @@ function openUpgradeModal(context) {
   const info = document.getElementById('upgrade-plan-info');
   if (info) {
     if (context === 'markers') {
-      info.innerHTML = `<div style="background:rgba(211,188,252,0.06);border-radius:1rem;padding:1rem;text-align:center;"><div style="font-size:28px;margin-bottom:0.5rem;">&#x1F512;</div><div style="font-family:Manrope;font-weight:700;font-size:14px;color:#d3bcfc;margin-bottom:0.5rem;">Biomarqueurs avanc&#xE9;s</div><div style="font-size:12px;color:#cbc4d0;font-family:Inter;line-height:1.6;">PSA, Oncosure et D-Dim&#xE8;res sont disponibles avec le forfait <strong style=\"color:#d3bcfc;\">Standard</strong>.</div></div>`;
+      info.innerHTML = `<div style="background:rgba(211,188,252,0.06);border-radius:1rem;padding:1rem;text-align:center;"><div style="font-size:28px;margin-bottom:0.5rem;">&#x1F512;</div><div style="font-family:Manrope;font-weight:700;font-size:14px;color:#b57bee;margin-bottom:0.5rem;">Biomarqueurs avanc&#xE9;s</div><div style="font-size:12px;color:#cbc4d0;font-family:Inter;line-height:1.6;">PSA, Oncosure et D-Dim&#xE8;res sont disponibles avec le forfait <strong style=\"color:#b57bee;\">Standard</strong>.</div></div>`;
     } else if (context === 'packs') {
       info.innerHTML = `<div style="background:rgba(211,188,252,0.06);border-radius:1rem;padding:1rem;text-align:center;">
         <div style="font-size:28px;margin-bottom:0.5rem;">&#x1F512;</div>
-        <div style="font-family:Manrope;font-weight:700;font-size:14px;color:#d3bcfc;margin-bottom:0.5rem;">Packs PRESS &amp; PULSE</div>
-        <div style="font-size:12px;color:#cbc4d0;font-family:Inter;line-height:1.6;">Acc\u00e9dez aux packs de suppl\u00e9mentation avec le forfait <strong style="color:#d3bcfc;">Soutien</strong>.</div>
+        <div style="font-family:Manrope;font-weight:700;font-size:14px;color:#b57bee;margin-bottom:0.5rem;">Packs PRESS &amp; PULSE</div>
+        <div style="font-size:12px;color:#cbc4d0;font-family:Inter;line-height:1.6;">Acc\u00e9dez aux packs de suppl\u00e9mentation avec le forfait <strong style="color:#b57bee;">Soutien</strong>.</div>
       </div>`;
     } else {
       info.innerHTML = `<div style="background:rgba(211,188,252,0.06);border-radius:1rem;padding:1rem;text-align:center;">
         <div style="font-size:28px;margin-bottom:0.5rem;">&#x1F512;</div>
-        <div style="font-family:Manrope;font-weight:700;font-size:14px;color:#d3bcfc;margin-bottom:0.5rem;">Fonctionnalit\u00e9 avanc\u00e9e</div>
-        <div style="font-size:12px;color:#cbc4d0;font-family:Inter;line-height:1.6;">Passez \u00e0 <strong style="color:#d3bcfc;">Standard</strong> ou <strong style="color:#d3bcfc;">Soutien</strong> pour d\u00e9bloquer cette fonctionnalit\u00e9.</div>
+        <div style="font-family:Manrope;font-weight:700;font-size:14px;color:#b57bee;margin-bottom:0.5rem;">Fonctionnalit\u00e9 avanc\u00e9e</div>
+        <div style="font-size:12px;color:#cbc4d0;font-family:Inter;line-height:1.6;">Passez \u00e0 <strong style="color:#b57bee;">Standard</strong> ou <strong style="color:#b57bee;">Soutien</strong> pour d\u00e9bloquer cette fonctionnalit\u00e9.</div>
       </div>`;
     }
   }
@@ -3077,14 +3299,14 @@ function openRecipeModal(idx) {
   document.getElementById('modal-body').innerHTML = `
     ${(category || expertSource || frequency) ? `
     <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1rem;">
-      ${category ? `<span style="font-size:10px;background:rgba(211,188,252,0.12);color:#d3bcfc;padding:3px 10px;border-radius:9999px;font-family:Inter;font-weight:600;">${category}</span>` : ''}
+      ${category ? `<span style="font-size:10px;background:rgba(211,188,252,0.12);color:#b57bee;padding:3px 10px;border-radius:9999px;font-family:Inter;font-weight:600;">${category}</span>` : ''}
       ${expertSource ? `<span style="font-size:10px;background:rgba(52,211,153,0.1);color:#34d399;padding:3px 10px;border-radius:9999px;font-family:Inter;font-weight:600;">📚 ${expertSource}</span>` : ''}
-      ${frequency ? `<span style="font-size:10px;background:rgba(239,177,249,0.1);color:#efb1f9;padding:3px 10px;border-radius:9999px;font-family:Inter;font-weight:600;">🔄 ${frequency}</span>` : ''}
+      ${frequency ? `<span style="font-size:10px;background:rgba(239,177,249,0.1);color:#c77dff;padding:3px 10px;border-radius:9999px;font-family:Inter;font-weight:600;">🔄 ${frequency}</span>` : ''}
     </div>` : ''}
 
     ${therapeuticNote ? `
     <div style="background:rgba(211,188,252,0.06);border-left:3px solid rgba(211,188,252,0.6);border-radius:0 1rem 1rem 0;padding:0.875rem;margin-bottom:1.25rem;">
-      <div style="font-size:11px;color:#d3bcfc;text-transform:uppercase;letter-spacing:0.06em;font-family:Inter;font-weight:700;margin-bottom:0.375rem;">🌿 Note Thérapeutique</div>
+      <div style="font-size:11px;color:#b57bee;text-transform:uppercase;letter-spacing:0.06em;font-family:Inter;font-weight:700;margin-bottom:0.375rem;">🌿 Note Thérapeutique</div>
       <div style="font-size:13px;color:#cbc4d0;line-height:1.6;font-family:Inter;word-wrap:break-word;">${therapeuticNote}</div>
     </div>` : ''}
 
@@ -3093,7 +3315,7 @@ function openRecipeModal(idx) {
       ${ingredients.length > 0 ? `
       <div style="display:flex;flex-direction:column;gap:0.375rem;">
         ${ingredients.map(ing => `
-          <div style="display:flex;align-items:flex-start;gap:0.5rem;padding:0.5rem 0.75rem;background:#272a31;border-radius:0.75rem;">
+          <div style="display:flex;align-items:flex-start;gap:0.5rem;padding:0.5rem 0.75rem;background:#30363d;border-radius:0.75rem;">
             <span style="color:#34d399;font-size:14px;flex-shrink:0;margin-top:1px;">•</span>
             <span style="font-size:13px;color:#e1e2eb;font-family:Inter;word-wrap:break-word;flex:1;">${ing}</span>
           </div>
@@ -3108,20 +3330,20 @@ function openRecipeModal(idx) {
         ${stepsArr.map((step, i) => `
           <div style="display:flex;align-items:flex-start;gap:0.75rem;">
             <div style="width:24px;height:24px;border-radius:9999px;background:rgba(211,188,252,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;">
-              <span style="font-size:11px;color:#d3bcfc;font-weight:700;font-family:Inter;">${i+1}</span>
+              <span style="font-size:11px;color:#b57bee;font-weight:700;font-family:Inter;">${i+1}</span>
             </div>
             <div style="font-size:13px;color:#cbc4d0;line-height:1.6;font-family:Inter;word-wrap:break-word;flex:1;">${step}</div>
           </div>
         `).join('')}
       </div>` : `
-      <div style="display:flex;align-items:center;gap:0.625rem;padding:0.75rem;background:#272a31;border-radius:0.875rem;">
+      <div style="display:flex;align-items:center;gap:0.625rem;padding:0.75rem;background:#30363d;border-radius:0.875rem;">
         <span class="material-symbols-outlined" style="color:#948e99;font-size:18px;">sync</span>
         <span style="font-size:13px;color:#948e99;font-family:Inter;font-style:italic;">Instructions en cours de synchronisation…</span>
       </div>`}
     </div>
 
     ${notes ? `
-    <div style="background:#272a31;border-radius:0.875rem;padding:0.875rem;margin-bottom:1.25rem;">
+    <div style="background:#30363d;border-radius:0.875rem;padding:0.875rem;margin-bottom:1.25rem;">
       <div style="font-size:11px;color:#948e99;text-transform:uppercase;letter-spacing:0.06em;font-family:Inter;font-weight:600;margin-bottom:0.375rem;">📋 Notes</div>
       <div style="font-size:13px;color:#cbc4d0;line-height:1.6;font-family:Inter;word-wrap:break-word;">${notes}</div>
     </div>` : ''}
@@ -3130,7 +3352,7 @@ function openRecipeModal(idx) {
     <div>
       <div style="font-size:11px;color:#948e99;text-transform:uppercase;letter-spacing:0.06em;font-family:Inter;font-weight:600;margin-bottom:0.5rem;">🔬 Molécules actives</div>
       <div style="display:flex;flex-wrap:wrap;gap:0.375rem;">
-        ${molecules.map(m => `<span style="font-size:11px;background:rgba(211,188,252,0.1);color:#d3bcfc;padding:3px 12px;border-radius:9999px;font-family:Inter;border:1px solid rgba(211,188,252,0.2);">${typeof m === 'string' ? m : m.nom||m.name||''}</span>`).join('')}
+        ${molecules.map(m => `<span style="font-size:11px;background:rgba(211,188,252,0.1);color:#b57bee;padding:3px 12px;border-radius:9999px;font-family:Inter;border:1px solid rgba(211,188,252,0.2);">${typeof m === 'string' ? m : m.nom||m.name||''}</span>`).join('')}
       </div>
     </div>` : ''}
   `;
@@ -3151,15 +3373,15 @@ const MOLECULE_NOTES = {
   // ─── SYNERGIES ESSENTIELLES ───
   'Curcumine': {
     synergy: '⚡ Pipérine (Poivre Noir) OBLIGATOIRE → x20 biodisponibilité. Sans pipérine, absorption < 1%. Ratio : 1 prise curcumine + poivre noir frais.',
-    color: '#d3bcfc'
+    color: '#b57bee'
   },
   'Sulforaphane': {
     synergy: '⚡ EGCG (Matcha) + Quercétine → amplification x3 NRF2. Associer à Cacao/Café (inhibe ABCG2) pour x80 efficacité anti-efflux.',
-    color: '#d3bcfc'
+    color: '#b57bee'
   },
   'Quercétine': {
     synergy: '⚡ Ionophore Zinc : transporte le zinc à l\'intérieur des cellules cancéreuses. Prendre simultanément avec Zinc. Synergie Berbérine (double blocage glycolyse).',
-    color: '#d3bcfc'
+    color: '#b57bee'
   },
   'Zinc': {
     synergy: '⚡ Prendre avec Quercétine (ionophore Zinc → entrée cellulaire optimale). Synergie Vitamine C (activation enzymatique).',
@@ -3168,7 +3390,7 @@ const MOLECULE_NOTES = {
   },
   'Vitamine D3': {
     synergy: '⚡ Co-facteurs ESSENTIELS : K2-MK7 (200 mcg/j) + Magnésium. Sans ces deux co-facteurs, la D3 ne se convertit pas en forme active 1,25(OH)₂D3.',
-    color: '#d3bcfc'
+    color: '#b57bee'
   },
   'Vitamine C Liposomale': {
     synergy: '⚡ Synergie Quercétine (régénération Vit C) + Lysine + Proline (protocole Pauling anti-métastases).',
@@ -3182,7 +3404,7 @@ const MOLECULE_NOTES = {
   },
   'Magnésium Glycinate': {
     synergy: '⚡ Co-facteur Vitamine B6 obligatoire pour transport cellulaire optimal. Prendre avec D3 + K2.',
-    color: '#d3bcfc'
+    color: '#b57bee'
   },
   'Fer': {
     antagonism: '⚠️ ANTAGONISME Zinc : compétition absorption directe — espacer de 4h. ⚠️ DANGER CANCER : chélater avec Mélatonine (sidérophore) + EDTA IV.',
@@ -3190,7 +3412,7 @@ const MOLECULE_NOTES = {
   },
   'Mélatonine': {
     synergy: '⚡ Sidérophore naturel : chélate et élimine le fer tumoral. Synergie Acide Lipoïque ALA pour amplification chélation. Prendre impérativement en obscurité totale.',
-    color: '#d3bcfc'
+    color: '#b57bee'
   },
   'NAC': {
     synergy: '⚡ Précurseur GSH : combiner avec Glycine + Sélénium (Sélénométhionine) pour maximiser synthèse Glutathion.',
@@ -3204,15 +3426,15 @@ const MOLECULE_NOTES = {
   },
   'Matcha': {
     synergy: '⚡ L-Théanine + EGCG : synergie neuroprotection + anti-angiogenèse. Potentialise Sulforaphane (NRF2).',
-    color: '#d3bcfc'
+    color: '#b57bee'
   },
   'Resvératrol': {
     synergy: '⚡ Synergie Quercétine (amplification anti-VEGF + sénolytique) + Ptérostilbène (biodisponibilité ↑↑).',
-    color: '#d3bcfc'
+    color: '#b57bee'
   },
   'Oméga-3 DHA': {
     synergy: '⚡ Synergie Vitamine D3 (membranes cellulaires) + Vitamine E (protection oxydation lipides).',
-    color: '#d3bcfc'
+    color: '#b57bee'
   },
   'Nattokinase': {
     antagonism: '⚠️ ANTAGONISME Anticoagulants médicamenteux (Warfarine/Xarelto) : risque hémorragique grave. Signaler à l\'oncologue avant tout usage.',
@@ -3225,7 +3447,7 @@ const MOLECULE_NOTES = {
   },
   'CoQ10': {
     synergy: '⚡ Traitement Triple Israël : ALA + Garcinia Cambodia + CoQ10. Prendre avec graisses (liposoluble). Synergie Mélatonine (chaine respiratoire mitochondriale).',
-    color: '#d3bcfc'
+    color: '#b57bee'
   },
   'Acide Lipoïque': {
     synergy: '⚡ Antioxydant universel (hydro + liposoluble). Régénère Vitamine C, E, GSH, CoQ10. Synergie Mélatonine (chélation fer).',
@@ -3239,11 +3461,11 @@ const MOLECULE_NOTES = {
   },
   'Berbérine': {
     synergy: '⚡ Synergie Quercétine (double inhibition glycolyse + mTOR). Potentialise Metformine (si prescrite).',
-    color: '#d3bcfc'
+    color: '#b57bee'
   },
   'Vitamine K2': {
     synergy: '⚡ TRIADE D3 + K2-MK7 + Magnésium : indissociables pour activation ostéocalcine + prévention calcifications artérielles.',
-    color: '#d3bcfc'
+    color: '#b57bee'
   },
   'Glutathion': {
     antagonism: '⚠️ ANTAGONISME Artémisinine : ne pas combiner (antioxydant → neutralise effet ROS). ⚠️ Éviter si chimio à base de ROS (cisplatine).',
@@ -3291,7 +3513,7 @@ function savePatientData() {
     const orig = btn.textContent;
     btn.textContent = '✓ Dossier enregistré';
     btn.style.color = '#34d399';
-    setTimeout(() => { btn.textContent = orig; btn.style.color = '#d3bcfc'; }, 2000);
+    setTimeout(() => { btn.textContent = orig; btn.style.color = '#b57bee'; }, 2000);
   }
 }
 
@@ -3341,16 +3563,16 @@ async function searchFood() {
         <span style="font-size:11px;color:${zoneColor};background:${zoneColor}18;padding:3px 10px;border-radius:9999px;font-family:Inter;font-weight:700;white-space:nowrap;">${zoneLabel}</span>
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.5rem;margin-bottom:0.75rem;">
-        <div style="background:#272a31;border-radius:0.75rem;padding:0.625rem;text-align:center;">
+        <div style="background:#30363d;border-radius:0.75rem;padding:0.625rem;text-align:center;">
           <div style="font-size:18px;font-weight:800;color:${nutriColor};font-family:Manrope;">${nutri}</div>
           <div style="font-size:9px;color:#948e99;font-family:Inter;">Nutri-Score</div>
         </div>
-        <div style="background:#272a31;border-radius:0.75rem;padding:0.625rem;text-align:center;">
-          <div style="font-size:18px;font-weight:800;color:#efb1f9;font-family:Manrope;">${nova}</div>
+        <div style="background:#30363d;border-radius:0.75rem;padding:0.625rem;text-align:center;">
+          <div style="font-size:18px;font-weight:800;color:#c77dff;font-family:Manrope;">${nova}</div>
           <div style="font-size:9px;color:#948e99;font-family:Inter;">NOVA</div>
         </div>
-        <div style="background:#272a31;border-radius:0.75rem;padding:0.625rem;text-align:center;">
-          <div style="font-size:14px;font-weight:800;color:#d3bcfc;font-family:Manrope;">${Math.round(n['energy-kcal_100g']||n['energy_100g']/4.184||0)} kcal</div>
+        <div style="background:#30363d;border-radius:0.75rem;padding:0.625rem;text-align:center;">
+          <div style="font-size:14px;font-weight:800;color:#b57bee;font-family:Manrope;">${Math.round(n['energy-kcal_100g']||n['energy_100g']/4.184||0)} kcal</div>
           <div style="font-size:9px;color:#948e99;font-family:Inter;">Pour 100g</div>
         </div>
       </div>
