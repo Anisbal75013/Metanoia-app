@@ -416,6 +416,47 @@ input, textarea, select { user-select: text !important; -webkit-user-select: tex
   border-radius: 1.75rem; padding: 2rem 1.5rem 1.5rem; max-height: 90dvh; overflow-y: auto;
 }
 
+
+/* === CLAUDE AI ANALYSIS PANEL === */
+.ai-analysis-panel {
+  background: linear-gradient(135deg, rgba(35,15,69,0.6), rgba(19,22,30,0.9));
+  border: 1px solid rgba(211,188,252,0.2);
+  border-radius: 1.25rem;
+  padding: 1.25rem;
+  margin-top: 1rem;
+}
+.ai-analysis-header {
+  display: flex; align-items: center; gap: 0.5rem;
+  font-family: Manrope; font-weight: 800; font-size: 14px; color: #d3bcfc;
+  margin-bottom: 0.75rem;
+}
+.ai-analysis-result {
+  font-family: Inter; font-size: 13px; color: #cbc4d0; line-height: 1.7;
+  white-space: pre-wrap;
+}
+.ai-analysis-result.loading {
+  color: #948e99; font-style: italic; text-align: center; padding: 1rem 0;
+}
+.ai-analysis-result.error { color: #f87171; }
+.ai-btn {
+  display: flex; align-items: center; gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  background: linear-gradient(135deg, rgba(211,188,252,0.18), rgba(239,177,249,0.12));
+  border: 1px solid rgba(211,188,252,0.35);
+  border-radius: 0.875rem; cursor: pointer;
+  color: #d3bcfc; font-family: Inter; font-size: 13px; font-weight: 600;
+  transition: all 0.2s;
+}
+.ai-btn:hover { background: rgba(211,188,252,0.28); border-color: rgba(211,188,252,0.55); }
+.ai-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.api-key-wrapper {
+  background: rgba(19,22,30,0.8); border: 1px solid rgba(211,188,252,0.15);
+  border-radius: 1rem; padding: 1rem 1.25rem; margin-bottom: 0.75rem;
+}
+.api-key-status { font-size: 11px; font-family: Inter; margin-top: 0.4rem; }
+.api-key-status.ok  { color: #34d399; }
+.api-key-status.missing { color: #948e99; }
+
 </style>
 </head>
 <body class="dark" oncontextmenu="return false;">
@@ -2298,6 +2339,110 @@ renderProfil = function() {
     if (heroName) {
       // Construire le nom depuis la session si disponible
       const sess = (() => { try { return JSON.parse(localStorage.getItem('metanoia_session') || '{}'); } catch(e) { return {}; } })();
+
+
+// ============================================================
+// CLAUDE API — ANTHROPIC (claude-3-5-sonnet-20241022)
+// ============================================================
+const CLAUDE_MODEL = 'claude-3-5-sonnet-20241022';
+const CLAUDE_ENDPOINT = 'https://api.anthropic.com/v1/messages';
+
+function getClaudeKey() {
+  try { return localStorage.getItem('metanoia_claude_key') || ''; } catch(e) { return ''; }
+}
+function setClaudeKey(k) {
+  try { localStorage.setItem('metanoia_claude_key', k.trim()); } catch(e) {}
+}
+function saveClaudeKey() {
+  const inp = document.getElementById('claude-api-input');
+  if (!inp) return;
+  const k = inp.value.trim();
+  setClaudeKey(k);
+  const status = document.getElementById('claude-key-status');
+  if (status) {
+    status.textContent = k ? '\u2705 Cl\u00e9 enregistr\u00e9e dans votre appareil' : 'Aucune cl\u00e9 enregistr\u00e9e';
+    status.className = 'api-key-status ' + (k ? 'ok' : 'missing');
+  }
+}
+function initClaudeKeyUI() {
+  const inp = document.getElementById('claude-api-input');
+  const status = document.getElementById('claude-key-status');
+  if (!inp || !status) return;
+  const k = getClaudeKey();
+  inp.value = k ? k.substring(0,8) + '...' + k.slice(-4) : '';
+  status.textContent = k ? '\u2705 Cl\u00e9 enregistr\u00e9e dans votre appareil' : 'Aucune cl\u00e9 — saisissez-la ci-dessus';
+  status.className = 'api-key-status ' + (k ? 'ok' : 'missing');
+}
+
+async function callClaude(systemPrompt, userMessage) {
+  const key = getClaudeKey();
+  if (!key) throw new Error('Cl\u00e9 API Claude manquante. Ajoutez-la dans Profil \u2192 Configuration IA.');
+  const body = {
+    model: CLAUDE_MODEL,
+    max_tokens: 1024,
+    system: systemPrompt,
+    messages: [{ role: 'user', content: userMessage }]
+  };
+  const res = await fetch(CLAUDE_ENDPOINT, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'x-api-key': key,
+      'anthropic-version': '2023-06-01',
+      'anthropic-dangerous-direct-browser-access': 'true'
+    },
+    body: JSON.stringify(body)
+  });
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({}));
+    throw new Error(err?.error?.message || 'Erreur API ' + res.status);
+  }
+  const data = await res.json();
+  return data.content?.[0]?.text || '';
+}
+
+async function analyzeMarkers() {
+  const btn = document.getElementById('ai-analyze-btn');
+  const result = document.getElementById('ai-analysis-result');
+  if (!result) return;
+
+  // Collect marker values
+  const markers = {};
+  ['ferritine','d_dimeres','vitamine_d3','psa','oncosure','gki'].forEach(k => {
+    const el = document.getElementById('input-' + k);
+    if (el && el.value.trim()) markers[k] = el.value.trim();
+  });
+
+  if (!Object.keys(markers).length) {
+    result.className = 'ai-analysis-result error';
+    result.textContent = 'Veuillez saisir au moins une valeur de biomarqueur.';
+    return;
+  }
+
+  if (btn) btn.disabled = true;
+  result.className = 'ai-analysis-result loading';
+  result.textContent = '\u23f3 Analyse en cours par Claude 3.5 Sonnet\u2026';
+
+  const system = `Tu es un assistant sp\u00e9cialis\u00e9 en oncologie m\u00e9tabolique, form\u00e9 sur les protocoles de Thomas Seyfried et Guy Tenenbaum.
+Tu analyses des biomarqueurs dans le cadre d'un suivi m\u00e9tabolique. R\u00e9ponds toujours en fran\u00e7ais.
+IMPORTANT: Tu ne fais pas de diagnostic m\u00e9dical. Tu apportes des \u00e9clairages \u00e9ducatifs et contextuels.
+Format: sois concis, structur\u00e9, 3-4 points cl\u00e9s maximum, en langage accessible.`;
+
+  const msg = `Voici les valeurs biomarqueurs du patient:\n${Object.entries(markers).map(([k,v]) => `- ${k.toUpperCase()}: ${v}`).join('\n')}\n\nDonne une interpr\u00e9tation concise de ces valeurs dans le contexte du protocole m\u00e9tabolique anti-cancer. Identifie les points d'attention et les tendances positives.`;
+
+  try {
+    const text = await callClaude(system, msg);
+    result.className = 'ai-analysis-result';
+    result.textContent = text;
+  } catch(e) {
+    result.className = 'ai-analysis-result error';
+    result.textContent = '\u274C ' + e.message;
+  } finally {
+    if (btn) btn.disabled = false;
+  }
+}
+// End Claude API
+
       const displayName = p.prenom || (sess.user && sess.user !== 'metanoia' && sess.user !== 'admin' ? sess.user : null) || 'Mon Profil';
       heroName.textContent = displayName;
     }
