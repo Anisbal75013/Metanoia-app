@@ -2,17 +2,23 @@
 <html class="dark" lang="fr">
 <head>
 <meta charset="UTF-8"/>
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com https://js.stripe.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.tailwindcss.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://api.metanoia.fr https://api.stripe.com https://world.openfoodfacts.org; frame-src https://js.stripe.com; img-src 'self' data: https:; object-src 'none';"/>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com https://js.stripe.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.tailwindcss.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://api.metanoia.fr https://api.stripe.com https://world.openfoodfacts.org; frame-src https://js.stripe.com; img-src 'self' data: https:; object-src 'none'; worker-src 'self';"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-visual"/>
 <meta name="apple-mobile-web-app-capable" content="yes"/>
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
 <meta name="apple-mobile-web-app-title" content="Metanoia"/>
 <meta name="theme-color" content="#0d1117"/>
-<link rel="apple-touch-icon" href="https://via.placeholder.com/192/AA00FF/FFFFFF?text=M"/>
+<link rel="icon" href="./icon.png" type="image/png"/>
+<link rel="icon" sizes="32x32" href="./icon.png" type="image/png"/>
+<link rel="apple-touch-icon" href="./icon.png"/>
+<link rel="apple-touch-icon" sizes="180x180" href="./icon.png"/>
+
 <title>Metanoia — MODE DÉMO · Bio-Optimisation Oncologique</title>
+<link rel="manifest" href="./manifest.json"/>
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
@@ -620,6 +626,319 @@ html, body { overflow-x: hidden; max-width: 100vw; }
 .ai-quota-indicator .dot{width:7px;height:7px;border-radius:9999px;background:currentColor;flex-shrink:0}
 #profile-status-badge{font-family:Manrope;font-weight:800;font-size:12px;padding:.25rem .75rem;border-radius:9999px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);transition:color .3s}
 /* == END FINAL CSS == */
+
+/* === CERVEAU TAB === */
+.brain-search-wrap { position:relative; margin-bottom:1rem; }
+.brain-search-wrap input {
+  width:100%; padding:.75rem 1rem .75rem 2.8rem;
+  background:#161b22; border:1px solid #30363d; border-radius:10px;
+  color:#e1e2eb; font-size:15px; font-family:Manrope,sans-serif;
+  outline:none; transition:border .2s;
+}
+.brain-search-wrap input:focus { border-color:#b57bee; }
+.brain-search-wrap .search-ico {
+  position:absolute; left:.85rem; top:50%; transform:translateY(-50%);
+  color:#6e7681; font-size:20px;
+}
+.brain-filter-row { display:flex; gap:.5rem; flex-wrap:wrap; margin-bottom:1rem; }
+.brain-filter-btn {
+  padding:.35rem .9rem; border-radius:20px; border:1px solid #30363d;
+  background:#161b22; color:#948e99; font-size:12px; cursor:pointer;
+  font-family:Manrope,sans-serif; transition:all .2s;
+}
+.brain-filter-btn.active { background:#b57bee22; border-color:#b57bee; color:#b57bee; }
+.brain-stats {
+  font-size:12px; color:#6e7681; margin-bottom:.75rem; font-family:Inter,sans-serif;
+}
+.brain-card {
+  background:#161b22; border:1px solid #21262d; border-radius:12px;
+  padding:1rem; margin-bottom:.75rem; transition:border .2s;
+}
+.brain-card:hover { border-color:#30363d; }
+.brain-card-title {
+  font-size:14px; font-weight:700; color:#e1e2eb;
+  font-family:Manrope,sans-serif; margin-bottom:.3rem;
+  display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;
+}
+.brain-card-meta {
+  font-size:11px; color:#6e7681; font-family:Inter,sans-serif; margin-bottom:.4rem;
+}
+.brain-card-meta .source-badge {
+  display:inline-block; padding:1px 6px; border-radius:4px; font-size:10px;
+  margin-right:5px; font-weight:600;
+}
+.source-seyfried { background:#1f2d3d; color:#58a6ff; }
+.source-tenenbaum { background:#2d1f3d; color:#b57bee; }
+.brain-card-tags { display:flex; flex-wrap:wrap; gap:.3rem; margin-bottom:.5rem; }
+.brain-tag {
+  font-size:10px; padding:2px 7px; border-radius:10px;
+  background:#21262d; color:#948e99; font-family:Inter,sans-serif;
+}
+.brain-card-preview {
+  font-size:12px; color:#8b949e; font-family:Inter,sans-serif;
+  line-height:1.55;
+  display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;
+}
+.brain-card-preview mark { background:#b57bee33; color:#b57bee; border-radius:2px; }
+.brain-loading {
+  display:flex; flex-direction:column; align-items:center; padding:3rem 0;
+  color:#6e7681; gap:.75rem; font-size:13px; font-family:Inter,sans-serif;
+}
+.brain-spinner {
+  width:36px; height:36px; border:3px solid #21262d;
+  border-top-color:#b57bee; border-radius:50%; animation:spin .8s linear infinite;
+}
+@keyframes spin { to { transform:rotate(360deg); } }
+.brain-empty { text-align:center; color:#6e7681; padding:3rem 0; font-size:13px; }
+.brain-load-more {
+  width:100%; padding:.7rem; background:#161b22; border:1px solid #30363d;
+  border-radius:10px; color:#b57bee; font-family:Manrope,sans-serif; font-size:13px;
+  cursor:pointer; margin-top:.5rem; transition:background .2s;
+}
+.brain-load-more:hover { background:#21262d; }
+/* === QUOTA & PREMIUM === */
+.ai-quota-bar {
+  display:flex; align-items:center; justify-content:space-between;
+  margin:.55rem 0 .75rem;
+  font-size:12px; font-family:Inter,sans-serif;
+}
+.ai-quota-text { color:#6e7681; }
+.ai-quota-text strong { color:#b57bee; }
+.ai-quota-dots { display:flex; gap:5px; }
+.ai-quota-dot {
+  width:8px; height:8px; border-radius:50%;
+  background:#21262d; border:1.5px solid #30363d;
+  transition:background .25s, border-color .25s;
+}
+.ai-quota-dot.used {
+  background:#b57bee; border-color:#b57bee;
+  box-shadow:0 0 6px #b57bee66;
+}
+.ai-quota-dot.empty { background:#21262d; border-color:#30363d; }
+
+/* Modale Premium */
+#premium-overlay {
+  display:none; position:fixed; inset:0; z-index:900;
+  background:rgba(0,0,0,.7); backdrop-filter:blur(6px);
+  animation:fadeIn .2s ease;
+}
+#premium-modal {
+  position:fixed; bottom:0; left:0; right:0; z-index:901;
+  background:#0d1117;
+  border-top:1px solid #b57bee44;
+  border-radius:24px 24px 0 0;
+  padding:0 1.25rem 2rem;
+  animation:slideUp .3s cubic-bezier(.32,.72,0,1);
+  box-shadow:0 -12px 50px rgba(181,123,238,.15);
+}
+.premium-handle {
+  width:40px; height:4px; border-radius:2px;
+  background:#30363d; margin:14px auto 0;
+}
+.premium-icon-wrap {
+  width:64px; height:64px; border-radius:20px; margin:1.5rem auto 1rem;
+  background:linear-gradient(135deg,#7c3aed,#b57bee);
+  display:flex; align-items:center; justify-content:center;
+  box-shadow:0 6px 28px #7c3aed44;
+}
+.premium-title {
+  text-align:center; font-family:Manrope,sans-serif;
+  font-weight:800; font-size:20px; color:#e1e2eb; margin-bottom:.4rem;
+}
+.premium-subtitle {
+  text-align:center; font-size:13px; color:#8b949e;
+  font-family:Inter,sans-serif; margin-bottom:1.5rem; line-height:1.5;
+}
+.premium-features {
+  background:#161b22; border:1px solid #21262d; border-radius:14px;
+  padding:.9rem 1rem; margin-bottom:1.25rem;
+}
+.premium-feature {
+  display:flex; align-items:center; gap:.65rem;
+  padding:.35rem 0; font-size:13px; color:#c9d1d9;
+  font-family:Inter,sans-serif;
+}
+.premium-feature-icon {
+  width:22px; height:22px; border-radius:6px;
+  background:#b57bee22; color:#b57bee;
+  display:flex; align-items:center; justify-content:center;
+  font-size:12px; flex-shrink:0;
+}
+.premium-cta-btn {
+  width:100%; padding:.95rem; border:none; border-radius:14px;
+  background:linear-gradient(135deg,#7c3aed,#b57bee);
+  color:#fff; font-family:Manrope,sans-serif;
+  font-size:16px; font-weight:800; cursor:pointer;
+  box-shadow:0 4px 20px #7c3aed44;
+  transition:opacity .2s, transform .15s;
+  display:flex; align-items:center; justify-content:center; gap:.5rem;
+}
+.premium-cta-btn:hover { opacity:.9; transform:translateY(-1px); }
+.premium-cancel-btn {
+  width:100%; padding:.7rem; border:none; background:none;
+  color:#484f58; font-size:13px; font-family:Inter,sans-serif;
+  cursor:pointer; margin-top:.6rem;
+}
+.premium-cancel-btn:hover { color:#6e7681; }
+/* === AI PANEL === */
+.ai-ask-btn {
+  flex-shrink:0;
+  display:flex;align-items:center;gap:.4rem;
+  padding:.6rem 1rem;
+  background:linear-gradient(135deg,#7c3aed,#b57bee);
+  border:none;border-radius:10px;
+  color:#fff;font-family:Manrope,sans-serif;font-size:13px;font-weight:700;
+  cursor:pointer;white-space:nowrap;
+  transition:opacity .2s,transform .15s;
+  box-shadow:0 2px 12px #7c3aed44;
+}
+.ai-ask-btn:hover { opacity:.9; transform:translateY(-1px); }
+.ai-ask-btn:disabled { opacity:.45; cursor:not-allowed; transform:none; }
+
+/* Overlay */
+#ai-overlay {
+  display:none;position:fixed;inset:0;z-index:800;
+  background:rgba(0,0,0,.6);backdrop-filter:blur(4px);
+  animation:fadeIn .2s ease;
+}
+@keyframes fadeIn  { from{opacity:0} to{opacity:1} }
+@keyframes slideUp { from{transform:translateY(100%)} to{transform:translateY(0)} }
+
+/* Panel */
+#ai-panel {
+  position:fixed;bottom:0;left:0;right:0;z-index:801;
+  background:#0d1117;
+  border-top:1px solid #30363d;
+  border-radius:20px 20px 0 0;
+  max-height:85vh;display:flex;flex-direction:column;
+  animation:slideUp .28s cubic-bezier(.32,.72,0,1);
+  box-shadow:0 -8px 40px rgba(0,0,0,.5);
+}
+.ai-panel-handle {
+  width:40px;height:4px;border-radius:2px;background:#30363d;
+  margin:12px auto 0;flex-shrink:0;
+}
+.ai-panel-head {
+  display:flex;align-items:center;justify-content:space-between;
+  padding:.85rem 1rem .6rem;flex-shrink:0;
+}
+.ai-panel-title {
+  display:flex;align-items:center;gap:.5rem;
+  font-family:Manrope,sans-serif;font-weight:800;font-size:16px;color:#e1e2eb;
+}
+.ai-close-btn {
+  width:32px;height:32px;border-radius:50%;
+  background:#161b22;border:1px solid #30363d;
+  color:#8b949e;font-size:18px;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  transition:background .15s;
+}
+.ai-close-btn:hover { background:#21262d; }
+.ai-panel-body { overflow-y:auto;flex:1;padding:0 1rem 1rem; }
+
+/* Contexte */
+.ai-context-box {
+  background:#161b22;border:1px solid #21262d;border-radius:10px;
+  padding:.75rem;margin-bottom:.85rem;
+}
+.ai-context-label {
+  font-size:11px;font-weight:700;color:#6e7681;font-family:Inter,sans-serif;
+  text-transform:uppercase;letter-spacing:.06em;margin-bottom:.5rem;
+}
+.ai-context-item {
+  display:flex;align-items:flex-start;gap:.5rem;
+  padding:.35rem 0;border-bottom:1px solid #21262d;
+  font-size:12px;color:#8b949e;font-family:Inter,sans-serif;
+}
+.ai-context-item:last-child { border-bottom:none; }
+.ai-context-num {
+  flex-shrink:0;width:18px;height:18px;border-radius:50%;
+  background:#b57bee22;color:#b57bee;
+  font-size:10px;font-weight:700;font-family:Manrope,sans-serif;
+  display:flex;align-items:center;justify-content:center;margin-top:1px;
+}
+.ai-context-empty {
+  font-size:12px;color:#f85149;font-family:Inter,sans-serif;
+  display:flex;align-items:center;gap:.4rem;
+}
+
+/* Question */
+.ai-question-label {
+  font-size:12px;font-weight:700;color:#8b949e;font-family:Manrope,sans-serif;
+  margin-bottom:.4rem;
+}
+#ai-question {
+  width:100%;min-height:80px;max-height:160px;resize:vertical;
+  background:#161b22;border:1px solid #30363d;border-radius:10px;
+  color:#e1e2eb;font-size:14px;font-family:Inter,sans-serif;
+  padding:.7rem .85rem;outline:none;box-sizing:border-box;
+  transition:border .2s;line-height:1.5;
+}
+#ai-question:focus { border-color:#b57bee; }
+#ai-question::placeholder { color:#484f58; }
+
+.ai-send-btn {
+  width:100%;margin-top:.75rem;padding:.8rem;
+  background:linear-gradient(135deg,#7c3aed,#b57bee);
+  border:none;border-radius:10px;
+  color:#fff;font-family:Manrope,sans-serif;font-size:15px;font-weight:700;
+  cursor:pointer;transition:opacity .2s;
+  display:flex;align-items:center;justify-content:center;gap:.5rem;
+}
+.ai-send-btn:hover { opacity:.88; }
+.ai-send-btn:disabled { opacity:.4;cursor:not-allowed; }
+
+/* Spinner */
+.ai-spinner {
+  width:18px;height:18px;border:2px solid rgba(255,255,255,.3);
+  border-top-color:#fff;border-radius:50%;
+  animation:spin .7s linear infinite;flex-shrink:0;
+}
+
+/* Divider */
+.ai-divider {
+  height:1px;background:#21262d;margin:1rem 0;
+}
+
+/* Réponse */
+.ai-response-label {
+  font-size:11px;font-weight:700;color:#6e7681;font-family:Inter,sans-serif;
+  text-transform:uppercase;letter-spacing:.06em;margin-bottom:.65rem;
+  display:flex;align-items:center;gap:.4rem;
+}
+#ai-response-body {
+  font-size:14px;color:#c9d1d9;font-family:Inter,sans-serif;line-height:1.7;
+}
+#ai-response-body h1,#ai-response-body h2,#ai-response-body h3 {
+  font-family:Manrope,sans-serif;color:#e1e2eb;margin:.8rem 0 .4rem;
+}
+#ai-response-body strong { color:#e1e2eb;font-weight:700; }
+#ai-response-body em { color:#b57bee; }
+#ai-response-body ul,#ai-response-body ol {
+  padding-left:1.2rem;margin:.4rem 0;
+}
+#ai-response-body li { margin:.25rem 0; }
+#ai-response-body code {
+  background:#161b22;border:1px solid #30363d;
+  border-radius:4px;padding:1px 5px;font-size:12px;color:#79c0ff;
+}
+#ai-response-body blockquote {
+  border-left:3px solid #b57bee;padding-left:.75rem;
+  color:#8b949e;margin:.6rem 0;font-style:italic;
+}
+#ai-response-body a { color:#b57bee;text-decoration:none; }
+.ai-error-msg {
+  color:#f85149;font-size:13px;font-family:Inter,sans-serif;
+  background:#f8514914;border:1px solid #f8514930;
+  border-radius:8px;padding:.65rem .85rem;
+  display:flex;align-items:center;gap:.5rem;
+}
+.ai-warning-msg {
+  color:#e3b341;font-size:13px;font-family:Inter,sans-serif;
+  background:#e3b34114;border:1px solid #e3b34130;
+  border-radius:8px;padding:.65rem .85rem;
+  display:flex;align-items:center;gap:.5rem;
+}
 </style>
 </head>
 <body class="dark" oncontextmenu="return false;">
@@ -1392,8 +1711,147 @@ const DB = (function(b64){var bin=atob(b64);var bytes=new Uint8Array(bin.length)
       <span class="material-symbols-outlined nav-icon">person</span>
       <span class="nav-label">Profil</span>
     </button>
+    <button class="nav-item" id="nav-cerveau" onclick="showView('cerveau')">
+      <span class="material-symbols-outlined nav-icon">psychology</span>
+      <span class="nav-label">Cerveau</span>
+    </button>
   </div>
 </nav>
+
+<!-- =================== AI PANEL =================== -->
+<div id="ai-overlay" onclick="closeAIPanel()"></div>
+<div id="ai-panel" style="display:none;">
+  <div class="ai-panel-handle"></div>
+  <div class="ai-panel-head">
+    <div class="ai-panel-title">
+      <span style="font-size:20px;">✨</span>
+      <span>Demander à l'IA Metanoia</span>
+    </div>
+    <button class="ai-close-btn" onclick="closeAIPanel()">✕</button>
+  </div>
+  <div class="ai-panel-body">
+
+    <!-- Contexte (top 3 résultats) -->
+    <div class="ai-context-box">
+      <div class="ai-context-label">📚 Contexte injecté (top 3 résultats)</div>
+      <div id="ai-context-preview"></div>
+    </div>
+
+    <!-- Question -->
+    <div class="ai-question-label">Votre question</div>
+    <textarea id="ai-question"
+      placeholder="Ex: Quel est le rôle de la glutamine dans la croissance tumorale ?"
+      onkeydown="if(event.key==='Enter'&&(event.ctrlKey||event.metaKey))sendAIQuery()"></textarea>
+    <!-- Indicateur quota -->
+    <div class="ai-quota-bar" id="ai-quota-bar">
+      <span class="ai-quota-text">Questions restantes : <strong id="ai-quota-count">2</strong>/2</span>
+      <span class="ai-quota-dots"><span class="ai-quota-dot used" id="qdot-0"></span><span class="ai-quota-dot used" id="qdot-1"></span></span>
+    </div>
+    <button class="ai-send-btn" id="ai-send-btn" onclick="sendAIQuery()">
+      <span id="ai-btn-label">Envoyer à l'IA</span>
+    </button>
+
+    <!-- Réponse -->
+    <div id="ai-response-zone" style="display:none;">
+      <div class="ai-divider"></div>
+      <div class="ai-response-label">
+        <span style="font-size:14px;">✨</span> Réponse de l'IA Metanoia
+      </div>
+      <div id="ai-response-body"></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- =================== PREMIUM MODAL =================== -->
+<div id="premium-overlay" onclick="closePremiumModal()"></div>
+<div id="premium-modal" style="display:none;">
+  <div class="premium-handle"></div>
+  <div class="premium-icon-wrap">
+    <span style="font-size:30px;">✨</span>
+  </div>
+  <div class="premium-title">Passez au Premium</div>
+  <div class="premium-subtitle">
+    Vous avez utilisé vos 2 questions gratuites aujourd'hui.<br>
+    Débloquez l'accès illimité à l'IA Metanoia.
+  </div>
+  <div class="premium-features">
+    <div class="premium-feature">
+      <div class="premium-feature-icon">∞</div>
+      <span>Questions illimitées à l'IA chaque jour</span>
+    </div>
+    <div class="premium-feature">
+      <div class="premium-feature-icon">🧠</div>
+      <span>Analyse personnalisée de vos biomarqueurs</span>
+    </div>
+    <div class="premium-feature">
+      <div class="premium-feature-icon">📊</div>
+      <span>Accès aux molécules et biomarqueurs Premium</span>
+    </div>
+    <div class="premium-feature">
+      <div class="premium-feature-icon">🔔</div>
+      <span>Mises à jour de la base Seyfried / Tenenbaum</span>
+    </div>
+  </div>
+  <button class="premium-cta-btn" onclick="handlePremiumCTA()">
+    <span>✨</span>
+    <span>Devenir Premium — 7,99 € / mois</span>
+  </button>
+  <button class="premium-cancel-btn" onclick="closePremiumModal()">
+    Continuer avec le plan gratuit
+  </button>
+</div>
+
+<!-- =================== VIEW CERVEAU =================== -->
+<div id="view-cerveau" class="view">
+  <div style="padding:1.25rem 1rem 0;">
+    <!-- En-tête -->
+    <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:1.25rem;">
+      <div style="width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,#b57bee,#7c3aed);
+                  display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+        <span class="material-symbols-outlined" style="color:#fff;font-size:22px;">psychology</span>
+      </div>
+      <div>
+        <div style="font-family:Manrope;font-weight:800;font-size:17px;color:#e1e2eb;">Cerveau Metanoia</div>
+        <div style="font-size:11px;color:#6e7681;font-family:Inter;">776 entrées · Seyfried &amp; Tenenbaum · 1M mots</div>
+      </div>
+    </div>
+
+    <!-- Barre de recherche + bouton IA -->
+    <div style="display:flex;gap:.5rem;align-items:center;margin-bottom:1rem;">
+      <div class="brain-search-wrap" style="flex:1;margin-bottom:0;">
+        <span class="material-symbols-outlined search-ico">search</span>
+        <input id="brain-search" type="search" placeholder="Glutamine, Warburg, jeûne, apigénine…"
+               oninput="debouncedBrainSearch()" onkeydown="if(event.key==='Enter')brainSearch()"/>
+      </div>
+      <button class="ai-ask-btn" id="ai-ask-btn" onclick="openAIPanel()" title="Demander à l'IA Metanoia">
+        <span style="font-size:16px;">✨</span>
+        <span>IA</span>
+      </button>
+    </div>
+
+    <!-- Filtres sources -->
+    <div class="brain-filter-row" id="brain-filters">
+      <button class="brain-filter-btn active" onclick="setBrainSource('all',this)">Tout (776)</button>
+      <button class="brain-filter-btn" onclick="setBrainSource('Thomas Seyfried',this)">Seyfried (28)</button>
+      <button class="brain-filter-btn" onclick="setBrainSource('Guy Tenenbaum',this)">Tenenbaum (748)</button>
+    </div>
+
+    <!-- Stats + résultats -->
+    <div class="brain-stats" id="brain-stats">Tapez un mot-clé ou parcourez les entrées récentes.</div>
+    <div id="brain-results">
+      <div class="brain-loading" id="brain-loading-init">
+        <div class="brain-spinner"></div>
+        <div>Chargement de la base de connaissances…</div>
+      </div>
+    </div>
+    <button class="brain-load-more" id="brain-more-btn" style="display:none" onclick="brainLoadMore()">
+      Afficher plus de résultats
+    </button>
+  </div>
+  <!-- Padding bottom nav -->
+  <div style="height:80px;"></div>
+</div>
 
 <!-- =================== JAVASCRIPT =================== -->
 <script>
@@ -3589,6 +4047,420 @@ async function searchFood() {
   }
 }
 
+</script>
+<script>
+/* ── Service Worker registration (PWA / IPFS) ── */
+
+// ════════════════════════════════════════════
+// CERVEAU — Knowledge Base Browser
+// ════════════════════════════════════════════
+let _brainData      = null;   // JSON complet
+let _brainFiltered  = [];     // résultats courants
+let _brainPage      = 0;      // pagination
+let _brainSource    = 'all';
+const BRAIN_PAGE_SIZE = 30;
+let _brainTimer     = null;
+
+function debouncedBrainSearch() {
+  clearTimeout(_brainTimer);
+  _brainTimer = setTimeout(brainSearch, 280);
+}
+
+function setBrainSource(src, btn) {
+  _brainSource = src;
+  document.querySelectorAll('.brain-filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  brainSearch();
+}
+
+async function loadBrainData() {
+  if (_brainData) return true;
+  try {
+    const r = await fetch('./knowledge_map.json');
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    _brainData = await r.json();
+    return true;
+  } catch(e) {
+    document.getElementById('brain-results').innerHTML =
+      '<div class="brain-empty">⚠️ Impossible de charger knowledge_map.json<br><small>' + e.message + '</small></div>';
+    document.getElementById('brain-loading-init').style.display = 'none';
+    return false;
+  }
+}
+
+async function brainSearch() {
+  // Chargement initial si nécessaire
+  if (!_brainData) {
+    const ok = await loadBrainData();
+    if (!ok) return;
+  }
+  document.getElementById('brain-loading-init').style.display = 'none';
+
+  const q   = (document.getElementById('brain-search').value || '').toLowerCase().trim();
+  let items = _brainData.entries || [];
+
+  // Filtre source
+  if (_brainSource !== 'all') items = items.filter(e => e.source === _brainSource);
+
+  // Filtre texte
+  if (q) {
+    const terms = q.split(/\s+/).filter(Boolean);
+    items = items.filter(e => {
+      const hay = ((e.title||'') + ' ' + (e.content||'') + ' ' + (e.extracted_tags||[]).join(' ')).toLowerCase();
+      return terms.every(t => hay.includes(t));
+    });
+  }
+
+  _brainFiltered = items;
+  _brainPage     = 0;
+
+  const total = items.length;
+  const shown = Math.min(BRAIN_PAGE_SIZE, total);
+  document.getElementById('brain-stats').textContent =
+    total === 0 ? 'Aucun résultat.' :
+    total + ' résultat' + (total>1?'s':'') + ' · ' + shown + ' affichés';
+
+  renderBrainCards(_brainFiltered.slice(0, shown), q, true);
+  document.getElementById('brain-more-btn').style.display =
+    total > BRAIN_PAGE_SIZE ? '' : 'none';
+}
+
+function brainLoadMore() {
+  _brainPage++;
+  const q     = (document.getElementById('brain-search').value || '').toLowerCase().trim();
+  const start = (_brainPage) * BRAIN_PAGE_SIZE;
+  const end   = start + BRAIN_PAGE_SIZE;
+  const slice = _brainFiltered.slice(start, end);
+  renderBrainCards(slice, q, false);
+  if (end >= _brainFiltered.length) {
+    document.getElementById('brain-more-btn').style.display = 'none';
+  }
+  document.getElementById('brain-stats').textContent =
+    _brainFiltered.length + ' résultats · ' + Math.min(end, _brainFiltered.length) + ' affichés';
+}
+
+function renderBrainCards(entries, q, reset) {
+  const container = document.getElementById('brain-results');
+  const html = entries.map(e => {
+    const srcClass = e.source === 'Thomas Seyfried' ? 'source-seyfried' : 'source-tenenbaum';
+    const srcLabel = e.source === 'Thomas Seyfried' ? 'Seyfried' : 'Tenenbaum';
+    const tags = (e.extracted_tags || []).slice(0, 7).map(t =>
+      '<span class="brain-tag">' + t + '</span>'
+    ).join('');
+    const preview = brainPreview(e.content || '', q);
+    const date = e.date ? e.date : '';
+    return `<div class="brain-card">
+      <div class="brain-card-title">${escH(e.title || '—')}</div>
+      <div class="brain-card-meta">
+        <span class="source-badge ${srcClass}">${srcLabel}</span>
+        ${date ? date + ' · ' : ''}${e.language || ''} · ${(e.word_count||0).toLocaleString()} mots
+      </div>
+      <div class="brain-card-tags">${tags}</div>
+      <div class="brain-card-preview">${preview}</div>
+    </div>`;
+  }).join('');
+
+  if (reset) container.innerHTML = html;
+  else container.insertAdjacentHTML('beforeend', html);
+}
+
+function brainPreview(content, q) {
+  if (!content) return '';
+  if (!q) return escH(content.substring(0, 220)) + '…';
+  const terms = q.split(/\s+/).filter(Boolean);
+  const firstTerm = terms[0];
+  const lo  = content.toLowerCase();
+  const idx = lo.indexOf(firstTerm);
+  let excerpt;
+  if (idx === -1) {
+    excerpt = content.substring(0, 220);
+  } else {
+    const s = Math.max(0, idx - 80);
+    const e2 = Math.min(content.length, idx + 160);
+    excerpt = (s > 0 ? '…' : '') + content.substring(s, e2);
+  }
+  // Highlight all terms
+  let safe = escH(excerpt);
+  terms.forEach(t => {
+    const re = new RegExp(escRE(t), 'gi');
+    safe = safe.replace(re, m => '<mark>' + m + '</mark>');
+  });
+  return safe + '…';
+}
+
+function escH(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+function escRE(s) {
+  return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+}
+
+// Auto-charge au premier affichage du tab Cerveau
+const _origShowView = showView;
+// On monkey-patch showView pour déclencher le load lors du premier clic Cerveau
+(function() {
+  const orig = window.showView;
+  window.showView = function(name) {
+    orig(name);
+    if (name === 'cerveau' && !_brainData) {
+      loadBrainData().then(() => brainSearch());
+    }
+  };
+})();
+
+
+
+// ════════════════════════════════════════════════════════
+// CERVEAU — IA METANOIA  (Gemini / Claude via Vercel)
+// ════════════════════════════════════════════════════════
+
+// ⚙️  Modifiez cette URL quand votre serveur Vercel est déployé
+// ⚙️  URL de l'API Metanoia — /api/query = même domaine Vercel (relatif)
+const API_URL = '/api/query';
+
+// ── prepareContext ───────────────────────────────────────
+function prepareContext() {
+  if (!_brainFiltered || _brainFiltered.length === 0) return null;
+  const top3 = _brainFiltered.slice(0, 3);
+  return top3.map((e, i) => {
+    const header = `[Source ${i + 1}] ${e.title} — ${e.source}${e.date ? ', ' + e.date : ''}`;
+    const body   = (e.content || '').substring(0, 900).trim();
+    return header + '\n' + body;
+  }).join('\n\n---\n\n');
+}
+
+// ── fetchAIResponse ──────────────────────────────────────
+async function fetchAIResponse(question, context) {
+  let resp;
+  try {
+    resp = await fetch(API_URL, {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify({ question, context }),
+    });
+  } catch (_networkErr) {
+    // fetch() a lancé une exception = réseau indisponible ou CORS bloqué
+    throw new Error('Serveur hors ligne ou inaccessible. Vérifiez votre connexion.');
+  }
+  if (!resp.ok) {
+    let detail = '';
+    try { detail = (await resp.json()).error || ''; } catch {}
+    // Erreurs HTTP typées
+    if (resp.status === 429) throw new Error('Quota API dépassé. Réessayez dans quelques secondes.');
+    if (resp.status === 503) throw new Error('Serveur Anthropic temporairement indisponible. Réessayez.');
+    if (resp.status === 500 && !detail) throw new Error('Erreur serveur interne. Vérifiez la clé API dans Vercel.');
+    throw new Error(detail || `Erreur ${resp.status}`);
+  }
+  const data = await resp.json();
+  return data.answer || data.response || data.text || JSON.stringify(data);
+}
+
+// ── renderMarkdown ───────────────────────────────────────
+function renderMarkdown(text) {
+  if (typeof marked !== 'undefined') {
+    try {
+      return marked.parse(text, { breaks: true, gfm: true });
+    } catch {}
+  }
+  // Fallback minimaliste si marked.js pas chargé
+  return text
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.+?)\*/g,     '<em>$1</em>')
+    .replace(/^#{1,3}\s+(.+)$/gm, '<strong>$1</strong>')
+    .replace(/^[-•]\s+(.+)$/gm, '<li>$1</li>')
+    .replace(/\n\n/g, '</p><p>')
+    .replace(/\n/g, '<br>');
+}
+
+// ── openAIPanel ──────────────────────────────────────────
+function openAIPanel() {
+  // Préparer l'aperçu du contexte
+  const ctxEl = document.getElementById('ai-context-preview');
+  const top3  = (_brainFiltered || []).slice(0, 3);
+
+  if (top3.length === 0) {
+    ctxEl.innerHTML =
+      '<div class="ai-context-empty">⚠️ Aucun résultat de recherche.' +
+      ' Veuillez d'abord effectuer une recherche pour donner du contexte à l\'IA.</div>';
+  } else {
+    ctxEl.innerHTML = top3.map((e, i) => `
+      <div class="ai-context-item">
+        <span class="ai-context-num">${i + 1}</span>
+        <span style="flex:1">${escH(e.title || '—')}<br>
+          <span style="font-size:10px;color:#484f58;">${e.source || ''}${e.date ? ' · ' + e.date : ''} · ${(e.word_count || 0).toLocaleString()} mots</span>
+        </span>
+      </div>`).join('');
+  }
+
+  // Réinitialiser la zone de réponse
+  document.getElementById('ai-response-zone').style.display = 'none';
+  document.getElementById('ai-response-body').innerHTML = '';
+  document.getElementById('ai-send-btn').disabled = false;
+  document.getElementById('ai-btn-label').textContent = 'Envoyer à l\'IA';
+
+  // Afficher
+  const panel   = document.getElementById('ai-panel');
+  const overlay = document.getElementById('ai-overlay');
+  panel.style.display   = 'flex';
+  overlay.style.display = 'block';
+  document.body.style.overflow = 'hidden';
+
+  setTimeout(() => document.getElementById('ai-question').focus(), 200);
+}
+
+// ── closeAIPanel ─────────────────────────────────────────
+function closeAIPanel() {
+  document.getElementById('ai-panel').style.display   = 'none';
+  document.getElementById('ai-overlay').style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+// ── sendAIQuery ──────────────────────────────────────────
+// ── Quota ──────────────────────────────────────────────────────
+const QUOTA_KEY_DATE  = 'metanoia_last_ask_date';
+const QUOTA_KEY_COUNT = 'metanoia_ask_count';
+const QUOTA_DAILY_MAX = 2;
+
+function isPremium() { return false; }
+
+function getTodayISO() {
+  return new Date().toISOString().split('T')[0];
+}
+
+function checkQuota() {
+  const today      = getTodayISO();
+  const storedDate = localStorage.getItem(QUOTA_KEY_DATE);
+  let   count      = parseInt(localStorage.getItem(QUOTA_KEY_COUNT) || '0', 10);
+  if (storedDate !== today) {
+    count = 0;
+    localStorage.setItem(QUOTA_KEY_DATE,  today);
+    localStorage.setItem(QUOTA_KEY_COUNT, '0');
+  }
+  return { allowed: count < QUOTA_DAILY_MAX, remaining: Math.max(0, QUOTA_DAILY_MAX - count), count };
+}
+
+function incrementQuota() {
+  const today = getTodayISO();
+  const count = parseInt(localStorage.getItem(QUOTA_KEY_COUNT) || '0', 10);
+  localStorage.setItem(QUOTA_KEY_DATE,  today);
+  localStorage.setItem(QUOTA_KEY_COUNT, String(count + 1));
+  updateQuotaDisplay();
+}
+
+function updateQuotaDisplay() {
+  const { remaining } = checkQuota();
+  const countEl = document.getElementById('ai-quota-count');
+  if (!countEl) return;
+  countEl.textContent = remaining;
+  for (let i = 0; i < QUOTA_DAILY_MAX; i++) {
+    const dot = document.getElementById('qdot-' + i);
+    if (!dot) continue;
+    dot.classList.toggle('used',  i < remaining);
+    dot.classList.toggle('empty', i >= remaining);
+  }
+  const sendBtn = document.getElementById('ai-send-btn');
+  if (sendBtn && !isPremium()) {
+    sendBtn.style.opacity = remaining > 0 ? '' : '0.45';
+    sendBtn.title         = remaining > 0 ? '' : 'Quota gratuit atteint (2/2)';
+  }
+}
+
+function openPremiumModal() {
+  document.getElementById('premium-modal').style.cssText  = 'display:flex;flex-direction:column;';
+  document.getElementById('premium-overlay').style.display = 'block';
+  document.body.style.overflow = 'hidden';
+}
+
+function closePremiumModal() {
+  document.getElementById('premium-modal').style.display   = 'none';
+  document.getElementById('premium-overlay').style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+function handlePremiumCTA() {
+  const STRIPE_URL = 'https://buy.stripe.com/VOTRE_LIEN_ICI';
+  closePremiumModal();
+  window.open(STRIPE_URL, '_blank');
+}
+
+async function sendAIQuery() {
+  const question = (document.getElementById('ai-question').value || '').trim();
+  const context  = prepareContext();
+  const respZone = document.getElementById('ai-response-zone');
+  const respBody = document.getElementById('ai-response-body');
+  const sendBtn  = document.getElementById('ai-send-btn');
+  const btnLabel = document.getElementById('ai-btn-label');
+
+  if (!question) {
+    respBody.innerHTML = '<div class="ai-warning-msg">\u26a0\ufe0f Veuillez saisir une question.</div>';
+    respZone.style.display = ''; return;
+  }
+  if (!context) {
+    respBody.innerHTML = '<div class="ai-warning-msg">\u26a0\ufe0f Veuillez d\'abord effectuer une recherche pour donner du contexte \u00e0 l\'IA.</div>';
+    respZone.style.display = ''; return;
+  }
+
+  // Quota check
+  if (!isPremium()) {
+    const quota = checkQuota();
+    if (!quota.allowed) { openPremiumModal(); return; }
+  }
+
+  sendBtn.disabled = true;
+  btnLabel.innerHTML = '<span class="ai-spinner"></span>&nbsp;Analyse en cours\u2026';
+  respBody.innerHTML = '<div style="display:flex;align-items:center;gap:.75rem;color:#6e7681;font-size:13px;padding:.5rem 0;">'
+    + '<span class="ai-spinner" style="border-top-color:#b57bee;border-color:#21262d;"></span>'
+    + '<span>L\'IA analyse les sources\u2026</span></div>';
+  respZone.style.display = '';
+  respZone.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+  let success = false;
+  try {
+    const answer = await fetchAIResponse(question, context);
+    respBody.innerHTML = renderMarkdown(answer);
+    success = true;
+  } catch (err) {
+    respBody.innerHTML =
+      `<div class="ai-error-msg">\u274c ${escH(err.message)}</div>`
+      + `<div style="font-size:11px;color:#484f58;margin-top:.5rem;font-family:Inter;">
+           URL\u00a0: <code style="color:#8b949e">${API_URL}</code> \u2014
+           V\u00e9rifiez que Vercel est d\u00e9ploy\u00e9.
+         </div>`;
+  } finally {
+    sendBtn.disabled = false;
+    btnLabel.textContent = 'Envoyer \u00e0 l\'IA';
+  }
+
+  if (success && !isPremium()) incrementQuota();
+}
+
+// Fermeture avec Escape
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && document.getElementById('ai-panel').style.display !== 'none') {
+    closeAIPanel();
+  }
+});
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('./sw.js', { scope: './' })
+      .then(function(reg) {
+        console.log('[Metanoia] SW registered, scope:', reg.scope);
+        reg.addEventListener('updatefound', function() {
+          const nw = reg.installing;
+          nw.addEventListener('statechange', function() {
+            if (nw.state === 'installed' && navigator.serviceWorker.controller) {
+              nw.postMessage('SKIP_WAITING');
+              console.log('[Metanoia] SW mis a jour, rechargement possible.');
+            }
+          });
+        });
+      })
+      .catch(function(err) {
+        console.warn('[Metanoia] SW non enregistre:', err);
+      });
+  });
+}
 </script>
 </body>
 </html>
